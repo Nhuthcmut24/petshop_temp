@@ -1,0 +1,56 @@
+header
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    border-bottom: 2px solid #000000;
+}
+.logo-bkbook
+{
+    width: 171px;
+    height: 121px;
+    margin: 0px;
+    flex-shrink: 0;
+}
+.logo
+{
+    display: flex;
+}
+nav .logo
+{
+    color: #04eeee;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120px;
+    letter-spacing: -0.32px;
+}
+nav .menu
+{
+    /* margin: auto; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 10px;
+
+}
+/* header nav .menu .search-bar
+{
+    align-items: center;
+    justify-content: space-between;
+    width: 235px;
+    height: 40px;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    padding: 0 20px;
+    margin: 20px;
+} */
+.menu .personalmenu
+{
+    align-items: right;
+    display: flex;
+    column-gap: 1px;
+    list-style: none;
+
+}

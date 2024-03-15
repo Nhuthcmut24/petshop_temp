@@ -1,0 +1,124 @@
+header
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    /* border-bottom: 2px solid #000000; */
+    height: 100px;
+    /* background: linear-gradient(180deg, rgba(255, 132, 98, 0.67) -53.1%, rgba(244, 218, 152, 0.28) 49%); */
+    /* background: linear-gradient(44.8deg, rgba(255, 136, 102, 0.67) -53.1%, rgba(255, 221, 136, 0.28) 49%); */
+    background-color: #ffffff;
+    border-bottom: 0.2px solid rgba(152, 152, 152, 0.4);
+}
+ header nav,
+ .menu
+ {
+    height: 100%;
+ }
+.logoBkbook
+{
+    width: 171px;
+    height: 121px;
+    margin: 0px;
+    flex-shrink: 0;
+    margin-right: 0px;
+}
+.logoo
+{
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+.logo h2
+{
+    font-family: 'Dancing Script', cursive;
+    position: relative;
+    left: -25px;
+}
+nav .logoo
+{
+    color: #003bba;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120px;
+    letter-spacing: -0.32px;
+}
+nav .menu
+{
+    /* margin: auto; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 10px;
+
+}
+header nav .menu ul
+{
+    display: flex;
+    margin-right: 10px;
+    padding: 0px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+header nav .menu ul li
+{
+    list-style: none;
+    width: 150px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-weight: 600;
+    font-family: 'Noticia Text', serif;
+}
+header nav .menu ul li a
+{
+    text-decoration: none;
+    font-size: 20px;
+    color: #a1a1a1;
+    transition: ease 0.5s;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+header nav .menu ul li a:hover
+{
+    text-decoration: none;
+    /* background: #038AD7; */
+    color: #ff3030;
+}
+header nav .menu .search-bar
+{
+    align-items: center;
+    justify-content: space-between;
+    width: 260px;
+    height: 40px;
+    border: 1px solid #ffffff00;
+    border-radius: 20px;
+    padding: 0 20px;
+    padding-right: 0px;
+    margin: 5px;
+}
+.menu .personalmenu
+{
+    align-items: right;
+    display: flex;
+    column-gap: 1px;
+    list-style: none;
+
+}
+header nav .menu .star,
+header nav .menu .cart
+{
+    margin: 10px;
+}
+header nav .menu .cart
+{
+    margin-right: 20px;
+}

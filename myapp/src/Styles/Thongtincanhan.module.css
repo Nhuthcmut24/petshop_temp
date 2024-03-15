@@ -1,0 +1,95 @@
+
+.infoPersonal{
+  margin-left:320px;
+  /* background-color:blue; */
+  margin-top: -680px;
+  height:750px;
+}
+.infoContainer{
+  width:500px;
+  height:420px;
+  margin-left:10px;
+  background-color:#E9E9E9;
+  border-radius:9px;
+}
+.info{
+  display:flex;
+  margin-top:10px;
+}
+.avatar{
+  margin-top:20px;
+  text-align: center;
+  font-size: 250px;
+}
+.infoDetails{
+  margin-top:-50px;
+
+  ul{
+    list-style: none;
+    li{
+      font-weight:15px;
+      margin-left:10px;
+      margin-bottom:8px;
+    }
+  }
+}
+.infoRight{
+  margin-top:50px;
+  margin-left:10px;
+  display:flex;
+  ul{
+    list-style: none;
+  }
+
+}
+.infoTel{
+  margin-left:20px;
+}
+.infoButton1{
+  position:absolute;
+  right:185px;
+  width:85px;
+  height:30px;
+  margin-top:5px;
+  cursor: pointer;
+  border: 2px solid #4A7DFF;
+  color:#4A7DFF;
+  background-color:#FFFFFF;
+  border-radius:10px;
+}
+.infoButton2{
+  position:absolute;
+  right:185px;
+  width:85px;
+  height:30px;
+  margin-top:5px;
+  cursor: pointer;
+  border: 2px solid #4A7DFF;
+  color:#4A7DFF;
+  background-color:#FFFFFF;
+  border-radius:10px;
+}
+.infoButton3{
+  position:absolute;
+  right:185px;
+  width:85px;
+  height:30px;
+  margin-top:5px;
+  cursor: pointer;
+  border: 2px solid #4A7DFF;
+  color:#4A7DFF;
+  background-color:#FFFFFF;
+  border-radius:10px;
+}
+.infoButton4{
+  position:absolute;
+  right:185px;
+  width:85px;
+  height:30px;
+  margin-top:5px;
+  cursor: pointer;
+  border: 2px solid #4A7DFF;
+  color:#4A7DFF;
+  background-color:#FFFFFF;
+  border-radius:10px;
+}

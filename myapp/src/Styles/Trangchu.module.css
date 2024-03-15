@@ -1,0 +1,236 @@
+.product-bar
+{
+  display: flex;
+  flex-direction: column;
+}
+
+.product-bar .header
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Căn giữa theo chiều dọc */
+  padding: 10px;
+}
+
+.product-bar .header .header-title,
+.product-bar .header .header-link
+{
+  margin: 0;
+}
+.product-bar .header .header-link:hover
+{
+  text-decoration: underline;
+}
+.product-bar .header .header-title
+{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.spacer
+{
+  flex-grow: 1;
+}
+
+.product-bar .header a {
+  color: #040EFF;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+
+.productImg
+{
+  display: block;
+  margin: 0 auto;
+  width: 110px;
+  height: 150px;
+  flex-shrink: 0;
+}
+.product
+{
+  margin: 5px;
+  width: 200px;
+  height: 253px;
+  padding-top: 5px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border: 1px solid #C2D0FF;
+  font-size: 10px;
+  border-radius: 10px;
+  /* background: rgba(224, 231, 248, 0.5); */
+  background: rgba(255, 255, 255, 0.95);
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.product:hover
+{
+  background: rgba(234, 234, 234, 0.95);
+}
+.multiple-products
+{
+  display:flex;
+  justify-content: space-around;
+}
+.product .bookTitle {
+  text-decoration: none;
+  font-size: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+  display: inline-block;
+  font-weight: bold;
+  color: black;
+}
+.product a:hover
+{
+  color: #474df8;
+  text-decoration: underline;
+
+}
+.starVoting
+{
+  width: 10px;
+  height: 10px;
+  object-fit: cover;
+  position: absolute;
+}
+.product p
+{
+  font-size: 18px;
+  margin-left: 5px;
+  margin-top: 5px;
+  margin-bottom: 7px;
+}
+p-voting
+{
+  position: relative;
+}
+/*///////////////////////////////////////////////////////////////////////////////////////////////*/
+.body
+{
+  background: linear-gradient(rgba(152, 152, 152, 0.4), rgba(152, 152, 152, 0.4)), url('../images/background3.jpg') center/cover no-repeat;
+  font-family: 'Noticia Text', serif;
+}
+.listProducts
+{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: auto;
+  margin: 0px;
+  margin-left: 90px;
+  /* background-color:red; */
+  width:1250px;
+}
+.content
+{
+  position: absolute;
+  left: 190px;
+  display: flex;
+  grid-template-columns: 210px auto;
+  align-items: start;
+  justify-content: center;
+  padding: 10px;
+  padding-inline: 17px;
+}
+.content ul li
+{
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  font-size: 22px;
+  width: 220px;
+  /* align-items: center; */
+  text-align: center;
+  /* padding: 10px; */
+}
+.content ul li
+{
+  transition: all 0.05s ease;
+  cursor: pointer;
+  /* background-color:blue; */
+  margin-left:10px;
+  border :2px solid #F5F8FF;
+  margin-top:10px;
+  background-color:#F5F8FF;
+}
+.content ul li:hover
+{
+  transform: scale(1.05);
+  color: #ff3030;
+  border: 1px solid #ff3030;
+  transition: all 0.5s ease;
+  background-color: #f3f3f3;
+}
+.content .listProducts{
+  padding: 30px;
+  padding-inline: 0px;
+  margin-left: left;
+  justify-content: left;
+
+}
+p[id='ten_sach']
+{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+p[id='search-result']
+{
+  position: relative;
+  top:20px;
+  left: 210px;
+}
+a[id='link-to-product-tag']
+{
+  all:unset;
+}
+.pagination
+{
+  text-decoration: none;
+  font-size: 15px;
+  list-style-type: none;
+  display: flex;
+  column-gap: 10px;
+  justify-content: center;
+  position: relative;
+  top: 780px;
+}
+.pagination li
+{
+  width: 20px;
+  height: 25px;
+}
+.nonCurrentPage
+{
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  border: 1px solid #000000;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border-radius:5px;
+  color: black;
+  padding: 6px 8px;
+}
+.currentPage
+{
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  border: 1px solid #000000;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  color: black;
+  background-color: #C92127;
+  color: white;
+  border: 1px solid #C92127;
+  border-radius:5px;
+  padding: 6px 8px;
+}

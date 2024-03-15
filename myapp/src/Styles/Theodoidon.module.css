@@ -1,0 +1,14 @@
+.searchbar{
+    position:  absolute;
+    font-family:'Roboto', sans-serif;
+    top: 150px;
+    left: 625px;
+    font-size: 20px;
+    height: 45px;
+    width: 255px;
+    border: 3px solid #111111;
+    border-radius:9px;
+    justify-content: space-between;
+    /* padding: 10px; */
+    /* text-align: */
+  }

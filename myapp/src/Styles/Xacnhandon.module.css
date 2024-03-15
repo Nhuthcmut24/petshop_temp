@@ -1,0 +1,59 @@
+.OrderTable{
+    position: absolute;
+    top: 200px;
+    left: 390px;
+    width: 1000px;
+    border: none;
+    border-collapse: collapse;
+    text-align: center;
+    background-color: #ffffff;
+  }
+.OrderTable td{
+    height: 100px;
+    width: 300px;
+}
+.OrderTable th{
+    height: 30px;
+    background-color: #fffbe7;
+}
+.OrderTable .tableColor{
+    background-color: #fffbe7;
+}
+th, td{
+    /* border: 3px solid #000000; */
+    border-collapse: collapse;
+}
+
+.tableContainer {
+    max-height: 350px;
+    /* overflow-y: hidden; */
+    overflow: auto;
+  }
+  .tableContainer thead{
+    /* border: 3px solid #000000; */
+    position: sticky;
+    top: 0;
+    background-color: #fffbe7;
+  }
+.searchbar{
+    position: absolute;
+    font-family:'Roboto', sans-serif;
+    top: 150px;
+    left: 390px;
+    font-size: 20px;
+    height: 40px;
+    width: 260px;
+    border: 3px solid #111111;
+    border-radius:9px;
+    /* border-radius: 2px; */
+    /* border-bottom: 1px solid #000000; */
+    justify-content: space-between;
+    /* padding: 10px; */
+    /* text-align: */
+  }
+.searchbar:focus{
+    outline: none;
+    border-bottom: 1px solid #000000;
+    background: #f4f4f4ae;
+    /* transition: all 0.5s ease-in; */
+}

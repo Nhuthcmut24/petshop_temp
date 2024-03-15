@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+.containerDetails{
+  position: absolute;
+  top: 100px;
+  padding: 20px;
+  margin-left: 300px;
+  /* margin-top:-550px; */
+  height:600px;
+  /* background-color: blue; */
+}
+.buttonDetails_1{
+  margin-top:5px;
+  cursor: pointer;
+  width:150px;
+  height:30px;
+  margin-left:20px;
+  border-radius:9px;
+  border: 1px solid #FFFFFF;
+  font-size:15px;
+  background-color: #DADADA;
+}
+.midDetails{
+  margin-left:20px;
+  margin-top:50px;
+  width:800px;
+  height:300px;
+  display:flex;
+}
+.midDetailsLeft{
+  width:300px;
+  img{
+    width:300px;
+    height:350px;
+    border-radius:5px;
+  }
+}
+.midDetailsRight{
+  width:500px;
+  margin-left:10px;
+}
+.buttonDetails_2{
+  cursor: pointer;
+  width:150px;
+  height:30px;
+  border-radius:9px;
+  border: 1px solid #FFFFFF;
+  font-size:15px;
+  background-color: #43FFD8;
+}
+.midDetailsRightBottom{
+  margin-top:150px;
+}
+.buttonDetails_3{
+  border: 2px solid #C92127;
+  border-color: #C92127;
+  margin-left: 30px;
+  margin-top:20px;
+  width:175px;
+  height:40px;
+  color:#C92127;
+  border-radius:9px;
+  background-color:#FFFFFF;
+  font-size:15px;
+  cursor: pointer;
+}
+.buttonDetails_4{
+  border: 2px solid #C92127;
+  border-color: #C92127;
+  margin-left:20px;
+  margin-top:20px;
+  width:175px;
+  height:40px;
+  color:#FFFFFF;
+  border-radius:9px;
+  background-color:#C92127;
+  font-size:15px;
+  cursor: pointer;
+}
+.modalWindow {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 200px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  border-radius:9px;
+  border: 2px solid #C92127;
+}
+
+.modalContent {
+  margin-top:50px;
+  margin-left:50px;
+}
+.modalButton{
+  margin-top:50px;
+  button{
+    margin-left:20px;
+  }
+}
+.modalButton_1{
+  border: 2px solid #FFFFFF;
+  color:#FFFFFF;
+  font-size:15px;
+  border-radius:9px;
+  background-color:#C92127;
+  width:60px;
+  height:30px;
+}
+.modalButton_2{
+  border: 2px solid #C92127;
+  border-color: #C92127;
+  color:#C92127;
+  font-size:15px;
+  border-radius:9px;
+  background-color:#FFFFFF;
+  width:60px;
+  height:30px;
+}
+.modalButton_3{
+  border: 2px solid #FFFFFF;
+  color:#FFFFFF;
+  font-size:15px;
+  border-radius:9px;
+  background-color:#C92127;
+  width:150px;
+  height:40px;
+  margin-top:50px;
+  margin-left:40px;
+}
+.modalContent_2 {
+  margin-top:50px;
+  margin-left:35px;
+}
+.orderTable{
+  position: absolute;
+  top: 170px;
+  left: 350px;
+  width:600px;
+  height:150px;
+  border-collapse: collapse;
+  border: none;
+}
+.orderTable td {
+  text-align: center;
+}
+.orderTable td[class="book-name"],
+.orderTable td[class="book-name-open-rating"] {
+  text-align: left;
+  padding-left: 5px;
+}
+.orderTable td[class="book-name-open-rating"]:hover {
+  cursor: pointer;
+  color: #C92127;
+  background-color: rgb(228, 233, 237);
+}
+.modalRatingWindow {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 250px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  border-radius:9px;
+  border: 2px solid #C92127;
+}
+.modalRatingWindow h3
+{
+  margin-top: 5px;
+  margin-left: 100px;
+}
+.ratingNumber,
+.ratingContent
+{
+  margin-top: 10px;
+  margin-left: 20px;
+}
+.ratingNumberRadio
+{
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+}
+.modalRatingButton
+{
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 80px 80px;
+  column-gap: 20px;
+  margin-left: 100px;
+}
+.ratingContent
+{
+  height: 90px;
+}
+.ratingContent div
+{
+  height: 80%;
+}
+.ratingContent textarea
+{
+  margin-top: 5px;
+  width: 95%;
+  height: 50px;
+  border: 1px solid #000000;
+}

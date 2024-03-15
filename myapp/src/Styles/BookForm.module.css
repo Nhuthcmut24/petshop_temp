@@ -1,0 +1,69 @@
+/* body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+} */
+
+.bookInput form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.feedbackInvalid {
+  display: none;
+}
+
+.feedbackValid {
+  color: #dc3545;
+  display: block;
+  margin-top: 4px;
+}
+
+
+.row {
+  display: flex;
+  gap: 100px;
+}
+
+.col {
+  flex: 1;
+}
+
+.description {
+  width: 100%;
+  height: 150px;
+}
+
+.bookForm label {
+  margin-bottom: 10px;
+}
+
+.bookForm input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.bookForm button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.formActions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}

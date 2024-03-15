@@ -1,0 +1,249 @@
+.signupTitle::before
+{
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    background: linear-gradient(0deg, rgba(133, 163, 207, 0.30) 0%, rgba(133, 163, 207, 0.30) 100%), url(./images/ruthsbookshelf.webp), lightgray 25% / cover no-repeat;
+    background-size: 25%;
+
+}
+.signupTitle
+{
+    position: relative;
+    height: 200px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 43px;
+}
+.signupTitle p
+{
+    position: relative;
+    display: flex;
+    width: 340px;
+    height: 44px;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #FFF;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.6px;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0px 4px 4px #FF2020;
+}
+
+.signupForm
+{
+    display: grid;
+    width: 614px;
+    height: 440px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1px solid #65A3FF;
+    text-align: center;
+    align-items: center;
+}
+
+.signupForm p
+{
+    color: #000;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.32px;
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+
+.signupForm input
+{
+    border: none;
+    border-bottom: 1px solid;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.2px;
+    width: 577px;
+    height: 60px;
+    flex-shrink: 0;
+    margin-left: 10px;
+}
+
+.signupForm form .signupButton
+{
+    width: 264px;
+    height: 63px;
+    flex-shrink: 0;
+    border-radius: 60px;
+    border: 1px solid #000;
+    cursor: pointer;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.2px;
+}
+
+.loginWelcome::before
+{
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    background: url(./images/BinhMinh.jpg), lightgray 50%;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.loginWelcome
+{   width: 614px;
+    height: 440px;
+    flex-shrink: 0;
+    position: relative;
+    flex-shrink: 0;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 43px;
+    background-color: #FF2020;
+    border-radius: 10px;
+    border: 2px solid #000;
+}
+
+.loginWelcome h2,
+.loginWelcome p,
+.loginWelcome .loginButton
+{
+    position: relative
+}
+
+.loginWelcome h2
+{
+    color: #FFF2F2;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.32px;
+    margin-top: 50px;
+    margin-bottom: 58px;
+}
+
+.loginWelcome p
+{
+    color: #FFF;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.2px;
+    margin-top: 0px;
+    margin-bottom: 46px;
+}
+
+.loginWelcome .loginButton
+{
+    width: 264px;
+    height: 63px;
+    flex-shrink: 0;
+    border-radius: 60px;
+    border: 1px solid #FFF;
+    background: #F00;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.2px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginWelcome .loginButton a
+{
+    text-decoration: none;
+    color: #FFF;
+}
+
+.loginWelcome .loginButton a:hover
+{
+    color: rgba(180, 176, 176);
+}
+.displaySignupForm
+{
+    display: grid;
+    grid-template-columns: 614px 614px;
+    column-gap: 140px;
+    margin: 0px 34px 49px 34px;
+    justify-content: space-evenly;
+}
+.signupPopup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 9px;
+    overflow: hidden;
+    width:300px;
+    height:150px;
+    padding: 20px;
+    text-align: center;
+    color: #C92127;
+    border: 2px solid #111111;
+}
+.popupContent {
+    margin-bottom: 20px;
+    margin-top:20px;
+}
+
+.closeButton {
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 14px;
+    color: #555;
+}
+
+  .closeButton:hover {
+    color: #333;
+  }
+.popupButton{
+    margin-top:15px;
+    width:80px;
+    height:35px;
+    border-radius:9px;
+    border: 2px solid #111111;
+    color: #111111;
+}
+.usernameInput:focus{
+    outline:none;
+}
+.passwordInput:focus{
+    outline:none;
+}
+.passwordReInput:focus{
+    outline:none;
+}
+.phoneInput:focus{
+    outline:none;
+}
