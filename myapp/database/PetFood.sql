@@ -1,6 +1,6 @@
-DROP DATABASE BKBOOK;
-CREATE DATABASE BKBOOK;
-USE BKBOOK;
+DROP DATABASE PETFOOD;
+CREATE DATABASE PETFOOD;
+USE PETFOOD;
 
 CREATE TABLE KhachHang (
     TenDangNhap VARCHAR(20) UNIQUE NOT NULL,
@@ -23,7 +23,7 @@ CREATE TABLE DanhMuc (
     PRIMARY KEY (ID)
 );
 
-CREATE TABLE Sach (
+CREATE TABLE Food (
     ID INT AUTO_INCREMENT,
     Ten VARCHAR(255) NOT NULL,
     Anh VARCHAR(255) NOT NULL,
@@ -31,30 +31,30 @@ CREATE TABLE Sach (
     Gia INT NOT NULL,
     MucGiamGia INT,
     SoLuongDaBan INT,
-    NXB VARCHAR(255) DEFAULT 'BKBook',
+    NXB VARCHAR(255) DEFAULT 'PETFOOD',
     TacGia VARCHAR(255) DEFAULT 'Anonymous',
     DiemTrungBinh FLOAT NOT NULL DEFAULT 0,
     PRIMARY KEY (ID)
 );
 
-CREATE TABLE SachThuocDanhMuc(
+CREATE TABLE FoodThuocDanhMuc(
     IDDanhMuc INT NOT NULL,
-    IDSach INT NOT NULL,
-    PRIMARY KEY (IDDanhMuc, IDSach)
+    IDFood INT NOT NULL,
+    PRIMARY KEY (IDDanhMuc, IDFood)
 );
-ALTER TABLE SachThuocDanhMuc
-ADD CONSTRAINT FK__SachThuocDanhMuc_DanhMuc FOREIGN KEY (IDDanhMuc) REFERENCES DanhMuc(ID),
-ADD CONSTRAINT FK__SachThuocDanhMuc_Sach FOREIGN KEY (IDSach) REFERENCES Sach(ID);
+ALTER TABLE FoodThuocDanhMuc
+ADD CONSTRAINT FK__FoodThuocDanhMuc_DanhMuc FOREIGN KEY (IDDanhMuc) REFERENCES DanhMuc(ID),
+ADD CONSTRAINT FK__FoodThuocDanhMuc_Food FOREIGN KEY (IDFood) REFERENCES Food(ID);
 
-CREATE TABLE KhachThemSach (
+CREATE TABLE KhachThemFood (
     SoDienThoai CHAR(10) NOT NULL,
-    IDSach INT NOT NULL,
+    IDFood INT NOT NULL,
     SoLuong INT NOT NULL,
-    PRIMARY KEY(SoDienThoai, IDSach)
+    PRIMARY KEY(SoDienThoai, IDFood)
 );
-ALTER TABLE KhachThemSach
-ADD CONSTRAINT FK__ThemSach_SDT FOREIGN KEY (SoDienThoai) REFERENCES KhachHang(SoDienThoai),
-ADD CONSTRAINT FK__ThemSach_ID FOREIGN KEY (IDSach) REFERENCES Sach(ID);
+ALTER TABLE KhachThemFood
+ADD CONSTRAINT FK__ThemFood_SDT FOREIGN KEY (SoDienThoai) REFERENCES KhachHang(SoDienThoai),
+ADD CONSTRAINT FK__ThemFood_ID FOREIGN KEY (IDFood) REFERENCES Food(ID);
 
 CREATE TABLE DonHang (
     ID INT AUTO_INCREMENT,
@@ -68,16 +68,16 @@ CREATE TABLE DonHang (
 ALTER TABLE DonHang
 ADD CONSTRAINT FK__DonHang__SDT FOREIGN KEY (SoDienThoai) REFERENCES KhachHang(SoDienThoai);
 
-CREATE TABLE DonHangCoSach(
+CREATE TABLE DonHangCoFood(
     IDDonHang INT NOT NULL,
-    IDSach INT NOT NULL,
+    IDFood INT NOT NULL,
     SoLuong INT,
     TongTien INT,
-    PRIMARY KEY (IDDonHang, IDSach)
+    PRIMARY KEY (IDDonHang, IDFood)
 );
-ALTER TABLE DonHangCoSach
+ALTER TABLE DonHangCoFood
 ADD CONSTRAINT FK__DHCS__IDDonHang FOREIGN KEY (IDDonHang) REFERENCES DonHang(ID),
-ADD CONSTRAINT FK__DHCS__IDSach FOREIGN KEY (IDSach) REFERENCES Sach(ID);
+ADD CONSTRAINT FK__DHCS__IDFood FOREIGN KEY (IDFood) REFERENCES Food(ID);
 
 CREATE TABLE NhanVien (
     ID CHAR(10) NOT NULL,
@@ -91,14 +91,14 @@ CREATE TABLE NhanVien (
 
 CREATE TABLE DanhGia (
     SoDienThoai CHAR(10) NOT NULL,
-    IDSach INT NOT NULL,
+    IDFood INT NOT NULL,
     SoSao INT,
     MoTa TEXT(65535),
-    PRIMARY KEY(SoDienThoai, IDSach)
+    PRIMARY KEY(SoDienThoai, IDFood)
 );
 ALTER TABLE DanhGia
 ADD CONSTRAINT FK__DanhGia_SDT FOREIGN KEY (SoDienThoai) REFERENCES KhachHang(SoDienThoai),
-ADD CONSTRAINT FK__DanhGia_IDSach FOREIGN KEY (IDSach) REFERENCES Sach(ID);
+ADD CONSTRAINT FK__DanhGia_IDFood FOREIGN KEY (IDFood) REFERENCES Food(ID);
 
 INSERT INTO KhachHang VALUE ('nguyenvana', '0903181625', '123456', 'Nguyễn Văn A', '2000/05/06', 'M', 'nguyenvana@gmail.com', 'TPHCM', NOW(), NOW());
 INSERT INTO KhachHang VALUE ('tranbinh', '0908452317', '12345678', 'Trần Văn Bình', '1993/08/12', 'M', 'tranvbinh@gmail.com', 'TPHCM', NOW(), NOW());
@@ -114,19 +114,19 @@ INSERT INTO DanhMuc VALUE (8, 'Sách Tham Khảo', NULL);
 INSERT INTO DanhMuc VALUE (9, 'Sách Ngoại Ngữ', NULL);
 INSERT INTO DanhMuc VALUE (10, 'Sách Giáo Khoa', NULL);
 
-insert into Sach(Ten, Anh, MoTa, Gia) value ('Essential Grammar in Use', 'grammar.webp', '_', 155000);
-insert into Sach(Ten, Anh, MoTa, Gia) value ('Kế toán vỉa hè', 'ktvh.png', '_', 99000);
-insert into Sach(Ten, Anh, MoTa, Gia) value ('Điều kỳ diệu ở tiệm tạp hóa Namiya', 'namiya.jpg', '_', 78000);
-insert into Sach(Ten, Anh, MoTa, Gia) value ('Ỷ thiên đồ long ký', 'yThien.jpg', '_', 62000);
-insert into Sach(Ten, Anh, MoTa, Gia) value ('Về nơi có nhiều cánh đồng', 'vncncd.jpg', '_', 150000);
-insert into Sach(Ten, Anh, MoTa, Gia) value ('Ngày xưa có một chuyện tình', 'nxc1ct.jpg', '_', 98000);
-insert into Sach(Ten, Anh, MoTa, Gia) value ('Toán cao cấp tập 1', 'toancc.webp', '_', 112000);
-insert into Sach(Ten, Anh, MoTa, Gia) value ('Osho - Tự tôn', 'osho-tu-ton.jpg', '_', 135000);
+insert into Food(Ten, Anh, MoTa, Gia) value ('Essential Grammar in Use', 'grammar.webp', '_', 155000);
+insert into Food(Ten, Anh, MoTa, Gia) value ('Kế toán vỉa hè', 'ktvh.png', '_', 99000);
+insert into Food(Ten, Anh, MoTa, Gia) value ('Điều kỳ diệu ở tiệm tạp hóa Namiya', 'namiya.jpg', '_', 78000);
+insert into Food(Ten, Anh, MoTa, Gia) value ('Ỷ thiên đồ long ký', 'yThien.jpg', '_', 62000);
+insert into Food(Ten, Anh, MoTa, Gia) value ('Về nơi có nhiều cánh đồng', 'vncncd.jpg', '_', 150000);
+insert into Food(Ten, Anh, MoTa, Gia) value ('Ngày xưa có một chuyện tình', 'nxc1ct.jpg', '_', 98000);
+insert into Food(Ten, Anh, MoTa, Gia) value ('Toán cao cấp tập 1', 'toancc.webp', '_', 112000);
+insert into Food(Ten, Anh, MoTa, Gia) value ('Osho - Tự tôn', 'osho-tu-ton.jpg', '_', 135000);
 
-INSERT INTO KhachThemSach VALUE ('0903181625', 1, 2);
-INSERT INTO KhachThemSach VALUE ('0903181625', 2, 3);
-INSERT INTO KhachThemSach VALUE ('0908452317', 3, 1);
-INSERT INTO KhachThemSach VALUE ('0908452317', 4, 2);
+INSERT INTO KhachThemFood VALUE ('0903181625', 1, 2);
+INSERT INTO KhachThemFood VALUE ('0903181625', 2, 3);
+INSERT INTO KhachThemFood VALUE ('0908452317', 3, 1);
+INSERT INTO KhachThemFood VALUE ('0908452317', 4, 2);
 
 INSERT INTO NhanVien VALUE ('EMP0001', 'admin', '123456789', 'Nguyễn Văn A', '0908246578', 'M');
 
@@ -141,8 +141,8 @@ BEGIN
     DECLARE total INT;
 
     SELECT SUM(S.Gia * KTS.SoLuong) INTO total
-    FROM KhachThemSach KTS
-    INNER JOIN Sach S ON KTS.IDSach = S.ID
+    FROM KhachThemFood KTS
+    INNER JOIN Food S ON KTS.IDFood = S.ID
     WHERE KTS.SoDienThoai = SDT;
 
     IF total IS NULL THEN
@@ -160,42 +160,42 @@ DECLARE SoDanhGia INT;
 
 SELECT SUM(SoSao),COUNT(*) INTO TongDiem,SoDanhGia
 FROM DanhGia 
-WHERE IDSach = NEW.IDSach;
+WHERE IDFood = NEW.IDFood;
 
 IF SoDanhGia > 0 THEN
-    UPDATE SACH SET DiemTrungBinh = TongDiem / SoDanhGia WHERE ID = NEW.IDSach;
+    UPDATE Food SET DiemTrungBinh = TongDiem / SoDanhGia WHERE ID = NEW.IDFood;
 END IF;
 END //
 
-CREATE PROCEDURE CapNhatSoLuongSachTrongGioHang(
+CREATE PROCEDURE CapNhatSoLuongFoodTrongGioHang(
     p_SoDienThoai CHAR(10),
-    p_IDSach INT,
+    p_IDFood INT,
     p_SoLuong INT
 )
 BEGIN
     DECLARE existingQuantity INT;
     DECLARE newQuantity INT;
 
-    SET existingQuantity = (SELECT SoLuong FROM KhachThemSach WHERE SoDienThoai = p_SoDienThoai AND IDSach = p_IDSach);
+    SET existingQuantity = (SELECT SoLuong FROM KhachThemFood WHERE SoDienThoai = p_SoDienThoai AND IDFood = p_IDFood);
     SET newQuantity = (existingQuantity + p_SoLuong); 
-    UPDATE KhachThemSach SET SoLuong = newQuantity WHERE SoDienThoai = p_SoDienThoai AND IDSach = p_IDSach;
+    UPDATE KhachThemFood SET SoLuong = newQuantity WHERE SoDienThoai = p_SoDienThoai AND IDFood = p_IDFood;
 
 END //
 
-CREATE PROCEDURE ThemSachVaoGioHang(
+CREATE PROCEDURE ThemFoodVaoGioHang(
     p_SoDienThoai CHAR(10),
-    p_IDSach INT,
+    p_IDFood INT,
     p_SoLuong INT
 )
 BEGIN
     -- Nếu sách chưa có trong giỏ hàng, thêm mới vào
-    IF p_IDSach NOT IN (SELECT IDSach FROM KhachThemSach WHERE SoDienThoai = p_SoDienThoai) THEN
+    IF p_IDFood NOT IN (SELECT IDFood FROM KhachThemFood WHERE SoDienThoai = p_SoDienThoai) THEN
         -- Thêm sách vào giỏ hàng
-        INSERT INTO KhachThemSach(p_SoDienThoai, p_IDSach, p_SoLuong) VALUE (p_IDSach, p_SoLuong);
+        INSERT INTO KhachThemFood(p_SoDienThoai, p_IDFood, p_SoLuong) VALUE (p_IDFood, p_SoLuong);
 
     ELSE
         -- Nếu sách đã có trong giỏ hàng, gọi thủ tục cập nhật số lượng
-        CALL CapNhatSoLuongSachTrongGioHang(p_SoDienThoai, p_IDSach, p_SoLuong);
+        CALL CapNhatSoLuongFoodTrongGioHang(p_SoDienThoai, p_IDFood, p_SoLuong);
     END IF;
 END //
 
@@ -209,8 +209,8 @@ BEGIN
     DECLARE IDDonHang INT;
 
     SELECT SUM(S.Gia * KTS.SoLuong) INTO p_TongTien
-    FROM KhachThemSach KTS
-    JOIN Sach S ON KTS.IDSach = S.ID
+    FROM KhachThemFood KTS
+    JOIN Food S ON KTS.IDFood = S.ID
     WHERE KTS.SoDienThoai = p_SoDienThoai;
 
     SET p_XacNhan = 'N';
@@ -220,13 +220,13 @@ BEGIN
     
     SET IDDonHang = LAST_INSERT_ID();
     
-    INSERT INTO DonHangCoSach (IDDonHang, IDSach, SoLuong, TongTien)
-    SELECT IDDonHang, IDSach, SoLuong, Gia * SoLuong
-    FROM KhachThemSach KTS
-    JOIN Sach S ON KTS.IDSach = S.ID
+    INSERT INTO DonHangCoFood (IDDonHang, IDFood, SoLuong, TongTien)
+    SELECT IDDonHang, IDFood, SoLuong, Gia * SoLuong
+    FROM KhachThemFood KTS
+    JOIN Food S ON KTS.IDFood = S.ID
     WHERE KTS.SoDienThoai = p_SoDienThoai;
     
-    DELETE FROM KhachThemSach WHERE SoDienThoai = p_SoDienThoai;
+    DELETE FROM KhachThemFood WHERE SoDienThoai = p_SoDienThoai;
     
 END //
 

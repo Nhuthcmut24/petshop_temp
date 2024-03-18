@@ -1,272 +1,258 @@
-.loginTitle::before
-{
-    content: ' ';
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.5;
-    background: linear-gradient(0deg, rgba(133, 163, 207, 0.30) 0%, rgba(133, 163, 207, 0.30) 100%), url(./images/ruthsbookshelf.webp), lightgray 25% / cover no-repeat;
-    background-size: 25%;
-
+.loginTitle::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  background: linear-gradient(
+      0deg,
+      rgba(133, 163, 207, 0.3) 0%,
+      rgba(133, 163, 207, 0.3) 100%
+    ),
+    url(./images/royal-canin-cho-meo-800x351.png),
+    lightgray 25% / cover no-repeat;
+  background-size: 25%;
 }
-.loginTitle
-{
-    position: relative;
-    height: 200px;
-    flex-shrink: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 43px;
+.loginTitle {
+  position: relative;
+  height: 200px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 43px;
 }
-.loginTitle p
-{
-    position: relative;
-    display: flex;
-    width: 340px;
-    height: 44px;
-    justify-content: center;
-    flex-shrink: 0;
-    color: #FFF;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: -0.6px;
-    align-items: center;
-    justify-content: center;
-    text-shadow: 0px 4px 4px #5081FF;
+.loginTitle p {
+  position: relative;
+  display: flex;
+  width: 340px;
+  height: 44px;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #fff;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.6px;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0px 4px 4px #5081ff;
 }
-.loginForm
-{
-    width: 614px;
-    height: 440px;
-    flex-shrink: 0;
-    border-radius: 10px;
-    border: 1px solid #FF2020;
-    display: grid;
-    gap: 0px;
-    align-items: center;
-    align-content: space-around;
-    justify-content: center;
-    justify-items: center;
-    margin-bottom: 43px;
+.loginForm {
+  width: 614px;
+  height: 440px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  border: 1px solid #ff2020;
+  display: grid;
+  gap: 0px;
+  align-items: center;
+  align-content: space-around;
+  justify-content: center;
+  justify-items: center;
+  margin-bottom: 43px;
 }
-.loginForm p
-{
-    width: 428px;
-    text-align: center;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: -0.32px;
-    margin: 16px 0px 16px 0px;
+.loginForm p {
+  width: 428px;
+  text-align: center;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.32px;
+  margin: 16px 0px 16px 0px;
 }
 .loginForm .usernameInput,
-.loginForm .passwordInput
-{
-    border: none;
-    border-bottom: 1px solid;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: -0.2px;
-    width: 577px;
-    height: 71px;
-    flex-shrink: 0;
-
+.loginForm .passwordInput {
+  border: none;
+  border-bottom: 1px solid;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  width: 577px;
+  height: 71px;
+  flex-shrink: 0;
 }
-.loginForm .usernameInput:focus{
-    outline:none;
+.loginForm .usernameInput:focus {
+  outline: none;
 }
-.loginForm .passwordInput:focus{
-    outline:none;
+.loginForm .passwordInput:focus {
+  outline: none;
 }
-.loginForm div
-{
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: -0.2px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.loginForm div {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.loginForm div a
-{
-    color: #4B8DBD;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: -0.2px;
-    text-decoration: none;
+.loginForm div a {
+  color: #4b8dbd;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  text-decoration: none;
 }
-.loginForm form
-{
-    display: block;
-    margin-top: 0em;
-    padding: 0px 5px;
+.loginForm form {
+  display: block;
+  margin-top: 0em;
+  padding: 0px 5px;
 }
-.loginForm form button
-{
-    width: 264px;
-    height: 63px;
-    flex-shrink: 0;
-    border-radius: 60px;
-    border: 1px solid #000;
-    color: #000;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: -0.2px;
-    cursor: pointer;
-    position: relative;
-    left: 30%;
+.loginForm form button {
+  width: 264px;
+  height: 63px;
+  flex-shrink: 0;
+  border-radius: 60px;
+  border: 1px solid #000;
+  color: #000;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  cursor: pointer;
+  position: relative;
+  left: 30%;
 }
-.loginForm .sub
-{
-    display: grid;
-    grid-template-columns: auto auto;
-    column-gap: 250px;
-    margin: 10px 5px 10px 0;
+.loginForm .sub {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 250px;
+  margin: 10px 5px 10px 0;
 }
 
 .signupWelcome {
-    position: relative;
-    width: 614px;
-    height: 440px;
-    border-radius: 10px;
-    border: 2px solid #000;
-    background-color: #65A3FF;
-    display: grid;
-    text-align: center;
-    align-items: stretch;
-    justify-items: center;
-  }
+  position: relative;
+  width: 614px;
+  height: 440px;
+  border-radius: 10px;
+  border: 2px solid #000;
+  background-color: #65a3ff;
+  display: grid;
+  text-align: center;
+  align-items: stretch;
+  justify-items: center;
+}
 
 .signupWelcome:before {
-    content: ' ';
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.5;
-    background-image: url(./images/whiteCloud.jpg);
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    background-size: cover;
-    border-radius: 10px;
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  background-image: url(./images/whiteCloud.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  border-radius: 10px;
 }
 .signupWelcome h2,
 .signupWelcome p,
-.signupWelcome .signupButton
-{
-    position: relative;
+.signupWelcome .signupButton {
+  position: relative;
 }
 
-.signupWelcome h2
-{
-    color: #FFF2F2;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-size: 35px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: -0.32px;
-    margin-top: 60px;
-    margin-bottom: 0px;
+.signupWelcome h2 {
+  color: #fff2f2;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.32px;
+  margin-top: 60px;
+  margin-bottom: 0px;
 }
 
-.signupWelcome p
-{
-    color: #FFF;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: -0.2px;
+.signupWelcome p {
+  color: #fff;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.2px;
 }
 
-.signupWelcome .signupButton
-{
-    width: 264px;
-    height: 63px;
-    flex-shrink: 0;
-    border-radius: 60px;
-    border: 2px solid #FFF;
-    background: #65A3FF;
-    color: #FFF;
-    font-family: Noticia Text;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: -0.2px;
-    cursor: pointer;
+.signupWelcome .signupButton {
+  width: 264px;
+  height: 63px;
+  flex-shrink: 0;
+  border-radius: 60px;
+  border: 2px solid #fff;
+  background: #65a3ff;
+  color: #fff;
+  font-family: Noticia Text;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  cursor: pointer;
 }
 
-.signupWelcome .signupButton
-{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color: #FFF;
+.signupWelcome .signupButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #fff;
 }
 
-.signupWelcome .signupButton:hover
-{
-    color: rgba(180, 176, 176);
+.signupWelcome .signupButton:hover {
+  color: rgba(180, 176, 176);
 }
 
-.displayLoginForm
-{
-    display: grid;
-    grid-template-columns: 614px 614px;
-    column-gap: 140px;
-    margin: 0px 34px 49px 34px;
-    justify-content: space-evenly;
+.displayLoginForm {
+  display: grid;
+  grid-template-columns: 614px 614px;
+  column-gap: 140px;
+  margin: 0px 34px 49px 34px;
+  justify-content: space-evenly;
 }
 .loginPopup {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    border-radius: 9px;
-    overflow: hidden;
-    max-width: 80%;
-    max-height: 80%;
-    padding: 20px;
-    text-align: center;
-    width:400px;
-    height:200px;
-    font-size:20px;
-    border:2px solid #C92127;
-    border-color:#111111;
-    color:#C92127;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 9px;
+  overflow: hidden;
+  max-width: 80%;
+  max-height: 80%;
+  padding: 20px;
+  text-align: center;
+  width: 400px;
+  height: 200px;
+  font-size: 20px;
+  border: 2px solid #c92127;
+  border-color: #111111;
+  color: #c92127;
 }
-.popupContent{
-    /* background-color:blue; */
-    margin-top:20px;
+.popupContent {
+  /* background-color:blue; */
+  margin-top: 20px;
 }
-.popupButton{
-    background-color:#FFFFFF;
-    margin-top:40px;
-    width:80px;
-    height:40px;
-    border:2px solid #111111;
-    border-radius:9px;
-    color: #111111;
+.popupButton {
+  background-color: #ffffff;
+  margin-top: 40px;
+  width: 80px;
+  height: 40px;
+  border: 2px solid #111111;
+  border-radius: 9px;
+  color: #111111;
 }

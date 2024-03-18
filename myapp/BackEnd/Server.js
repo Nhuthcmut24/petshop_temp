@@ -11,7 +11,7 @@
 // const db = mysql.createConnection({
 //   host: 'localhost',
 //   user: 'root',
-//   database: 'bkbook',
+//   database: 'PETFOOD',
 // });
 
 // db.connect((err) => {
@@ -27,7 +27,7 @@
 // app.use(bodyParser.json());
 
 // app.post('/api/signup', (req, res) => {
-  
+
 //   const { username, password, confirmPassword, phoneNumber } = req.body;
 
 //   // Kiểm tra mật khẩu và xác nhận mật khẩu
@@ -67,17 +67,17 @@
 
 // app.get('/api/cart/:username', (req, res) => {
 //   const username = req.params.username;
-//   const query = 
-//   'SELECT Anh, Ten, TacGia, NXB, Gia, SoLuong FROM khachhang, khachthemsach, sach WHERE TenDangNhap=? AND khachhang.SoDienThoai=khachthemsach.SoDienThoai AND khachthemsach.IDSach=sach.ID';
+//   const query =
+//   'SELECT Anh, Ten, TacGia, NXB, Gia, SoLuong FROM khachhang, khachthemFood, Food WHERE TenDangNhap=? AND khachhang.SoDienThoai=khachthemFood.SoDienThoai AND khachthemFood.IDFood=Food.ID';
 //   db.query(query, [username], (error, results) => {
 //     if (error) throw error;
-    
+
 //     res.json(results);
 //   });
 // });
 
 // app.get('/api/getBooksForHomePage', (req, res) => {
-//   const query = 'SELECT * FROM sach LIMIT 8';
+//   const query = 'SELECT * FROM Food LIMIT 8';
 //   db.query(query, (error, results) => {
 //     if (error) {
 //       console.error('Error executing query:', error);
@@ -92,7 +92,7 @@
 //   const searchTerm = req.query.q;
 
 //   const query =
-//     'SELECT * FROM sach WHERE LOWER(Ten) LIKE LOWER(?) OR LOWER(TacGia) LIKE LOWER(?)';
+//     'SELECT * FROM Food WHERE LOWER(Ten) LIKE LOWER(?) OR LOWER(TacGia) LIKE LOWER(?)';
 //   const params = [`%${searchTerm}%`, `%${searchTerm}%`];
 
 //   db.query(query, params, (error, results) => {

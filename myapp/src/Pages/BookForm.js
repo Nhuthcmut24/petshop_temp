@@ -77,142 +77,150 @@ const BookForm = () => {
 
   return (
     <div className={styles.bookInput}>
-    <Form
-      className={styles.bookForm}
-      noValidate
-      validated={validated}
-      onSubmit={handleSubmit}
-    >
-      <Row className={styles.row}>
-        <Col md={6} className={styles.col}>
-          <FormGroup>
-            <FormLabel>Tên sách</FormLabel>
-            <FormControl
-              type="text"
-              name="name"
-              value={bookInfo.name}
-              onChange={handleInputChange}
-              required
-            />
-            <Form.Control.Feedback
-              type="invalid"
-              className={showFeedback ? styles.feedbackValid : styles.feedbackInvalid}
-            >
-              Tên sách không được trống.
-            </Form.Control.Feedback>
-          </FormGroup>
-          <FormGroup>
-            <FormLabel>Ảnh</FormLabel>
-            <FormControl
-              type="file"
-              name="image"
-              accept="image/*"
-              onChange={handleImageChange}
-              required
-            />
-            <Form.Control.Feedback
-              type="invalid"
-              className={showFeedback ? styles.feedbackValid : styles.feedbackInvalid}
-            >
-              Vui lòng chọn ảnh.
-            </Form.Control.Feedback>
-          </FormGroup>
+      <Form
+        className={styles.bookForm}
+        noValidate
+        validated={validated}
+        onSubmit={handleSubmit}
+      >
+        <Row className={styles.row}>
+          <Col md={6} className={styles.col}>
+            <FormGroup>
+              <FormLabel>Tên thức ăn</FormLabel>
+              <FormControl
+                type="text"
+                name="name"
+                value={bookInfo.name}
+                onChange={handleInputChange}
+                required
+              />
+              <Form.Control.Feedback
+                type="invalid"
+                className={
+                  showFeedback ? styles.feedbackValid : styles.feedbackInvalid
+                }
+              >
+                Tên thức ăn không được trống.
+              </Form.Control.Feedback>
+            </FormGroup>
+            <FormGroup>
+              <FormLabel>Ảnh</FormLabel>
+              <FormControl
+                type="file"
+                name="image"
+                accept="image/*"
+                onChange={handleImageChange}
+                required
+              />
+              <Form.Control.Feedback
+                type="invalid"
+                className={
+                  showFeedback ? styles.feedbackValid : styles.feedbackInvalid
+                }
+              >
+                Vui lòng chọn ảnh.
+              </Form.Control.Feedback>
+            </FormGroup>
 
-          <FormGroup>
-            <FormLabel>Giá</FormLabel>
-            <FormControl
-              type="text"
-              name="price"
-              value={bookInfo.price}
-              onChange={handleInputChange}
-              pattern="^\d+(\.\d{1,2})?$"
-              required
-            />
-            <Form.Control.Feedback
-              type="invalid"
-              className={showFeedback ? styles.feedbackValid : styles.feedbackInvalid}
-            >
-              Giá sách không hợp lệ.
-            </Form.Control.Feedback>
-          </FormGroup>
+            <FormGroup>
+              <FormLabel>Giá</FormLabel>
+              <FormControl
+                type="text"
+                name="price"
+                value={bookInfo.price}
+                onChange={handleInputChange}
+                pattern="^\d+(\.\d{1,2})?$"
+                required
+              />
+              <Form.Control.Feedback
+                type="invalid"
+                className={
+                  showFeedback ? styles.feedbackValid : styles.feedbackInvalid
+                }
+              >
+                Giá sách không hợp lệ.
+              </Form.Control.Feedback>
+            </FormGroup>
 
-          <FormGroup>
-            <FormLabel>Tác giả</FormLabel>
-            <FormControl
-              type="text"
-              name="author"
-              onChange={handleInputChange}
-            />
-          </FormGroup>
-        </Col>
+            <FormGroup>
+              <FormLabel>Tác giả</FormLabel>
+              <FormControl
+                type="text"
+                name="author"
+                onChange={handleInputChange}
+              />
+            </FormGroup>
+          </Col>
 
-        <Col md={6} className={styles.col}>
-          <FormGroup>
-            <FormLabel>Nhà xuất bản</FormLabel>
-            <FormControl
-              type="text"
-              name="publisher"
-              onChange={handleInputChange}
-            />
-          </FormGroup>
+          <Col md={6} className={styles.col}>
+            <FormGroup>
+              <FormLabel>Nhà xuất bản</FormLabel>
+              <FormControl
+                type="text"
+                name="publisher"
+                onChange={handleInputChange}
+              />
+            </FormGroup>
 
-          <FormGroup>
-            <FormLabel>Số lượng đã bán</FormLabel>
-            <FormControl
-              type="text"
-              name="soldQuantity"
-              onChange={handleInputChange}
-            />
-          </FormGroup>
+            <FormGroup>
+              <FormLabel>Số lượng đã bán</FormLabel>
+              <FormControl
+                type="text"
+                name="soldQuantity"
+                onChange={handleInputChange}
+              />
+            </FormGroup>
 
-          <FormGroup>
-            <FormLabel>Mục giảm giá</FormLabel>
-            <FormControl
-              type="text"
-              name="discount"
-              onChange={handleInputChange}
-            />
-          </FormGroup>
+            <FormGroup>
+              <FormLabel>Mục giảm giá</FormLabel>
+              <FormControl
+                type="text"
+                name="discount"
+                onChange={handleInputChange}
+              />
+            </FormGroup>
 
-          <FormGroup>
-            <FormLabel>Điểm trung bình</FormLabel>
-            <FormControl
-              type="text"
-              name="averageRating"
-              onChange={handleInputChange}
-            />
-          </FormGroup>
-        </Col>
-      </Row>
+            <FormGroup>
+              <FormLabel>Điểm trung bình</FormLabel>
+              <FormControl
+                type="text"
+                name="averageRating"
+                onChange={handleInputChange}
+              />
+            </FormGroup>
+          </Col>
+        </Row>
 
-      <Row className={styles.row}>
-        <Col className={styles.col}>
-          <FormGroup>
-            <FormLabel>Mô tả</FormLabel>
-            <FormControl
-              as="textarea"
-              name="description"
-              className={styles.description}
-              value={bookInfo.description}
-              onChange={handleInputChange}
-              required
-            />
-            <Form.Control.Feedback
-              type="invalid"
-              className={showFeedback ? styles.feedbackValid : styles.feedbackInvalid}
-            >
-              Mô tả không được trống.
-            </Form.Control.Feedback>
-          </FormGroup>
-        </Col>
-      </Row>
+        <Row className={styles.row}>
+          <Col className={styles.col}>
+            <FormGroup>
+              <FormLabel>Mô tả</FormLabel>
+              <FormControl
+                as="textarea"
+                name="description"
+                className={styles.description}
+                value={bookInfo.description}
+                onChange={handleInputChange}
+                required
+              />
+              <Form.Control.Feedback
+                type="invalid"
+                className={
+                  showFeedback ? styles.feedbackValid : styles.feedbackInvalid
+                }
+              >
+                Mô tả không được trống.
+              </Form.Control.Feedback>
+            </FormGroup>
+          </Col>
+        </Row>
 
-      <FormGroup className={styles.formActions}>
-        <Button type="submit" variant="primary">
-          Xác nhận
-        </Button>
-      </FormGroup>
-    </Form>
+        <FormGroup className={styles.formActions}>
+          <Button type="submit" variant="primary">
+            Xác nhận
+          </Button>
+        </FormGroup>
+      </Form>
     </div>
   );
 };
