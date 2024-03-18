@@ -202,16 +202,16 @@ INSERT INTO KhachHang VALUE ('phamvbinh', '0909991573', '12345678', 'Phạm Văn
 INSERT INTO KhachHang VALUE ('quynh2507', '0902764213', '12345678', 'Nguyễn Ngọc Quỳnh', '1995/07/25', 'F', 'nguyenquynh@gmail.com', '313 Phạm Văn Chiêu, P14, Q.Gò Vấp, TP.HCM', NOW(), NOW());
 INSERT INTO KhachHang VALUE ('dat2203', '0913020447', '12345678', 'Trương Thành Đạt', '2001/03/22', 'M', 'truongtdat@gmail.com', '242 Lý Thường Kiệt, P14, Q.10, TP.HCM', NOW(), NOW());
 
-INSERT INTO DanhMuc VALUE (1, 'Truyện Ngắn', NULL);
-INSERT INTO DanhMuc VALUE (2, 'Truyện Dài', NULL);
-INSERT INTO DanhMuc VALUE (3, 'Tiểu Thuyết', NULL);
-INSERT INTO DanhMuc VALUE (4, 'Truyện Tranh', NULL);
-INSERT INTO DanhMuc VALUE (5, 'Kinh Dị', NULL);
-INSERT INTO DanhMuc VALUE (6, 'Trinh Thám', NULL);
-INSERT INTO DanhMuc VALUE (7, 'Ngôn Tình', NULL);
-INSERT INTO DanhMuc VALUE (8, 'Sách Tham Khảo', NULL);
-INSERT INTO DanhMuc VALUE (9, 'Sách Ngoại Ngữ', NULL);
-INSERT INTO DanhMuc VALUE (10, 'Sách Giáo Khoa', NULL);
+INSERT INTO DanhMuc VALUE (1, 'Thức ăn cho chó', NULL);
+INSERT INTO DanhMuc VALUE (2, 'Thức ăn cho mèo', NULL);
+INSERT INTO DanhMuc VALUE (3, 'Thức ăn cho cá', NULL);
+-- INSERT INTO DanhMuc VALUE (4, 'Truyện Tranh', NULL);
+-- INSERT INTO DanhMuc VALUE (5, 'Kinh Dị', NULL);
+-- INSERT INTO DanhMuc VALUE (6, 'Trinh Thám', NULL);
+-- INSERT INTO DanhMuc VALUE (7, 'Ngôn Tình', NULL);
+-- INSERT INTO DanhMuc VALUE (8, 'Sách Tham Khảo', NULL);
+-- INSERT INTO DanhMuc VALUE (9, 'Sách Ngoại Ngữ', NULL);
+-- INSERT INTO DanhMuc VALUE (10, 'Sách Giáo Khoa', NULL);
 
 insert into Food(Ten, Anh, MoTa, Gia, MucGiamGia, NhaSanXuat, NhaCungCap) value ('Cám thái INVE NRD 35 , 58 cho cá 7 màu,guppy,betta,cá thuỷ sinh', 'camthai.jpg', 'Cám thái INVE NRD 35 và 58 là loại thức ăn được thiết kế đặc biệt để cung cấp dinh dưỡng cần thiết cho cá 7 màu, guppy, betta và các loại cá khác trong hồ cá của bạn. Thức ăn này được chế biến từ các thành phần tự nhiên và giàu protein, vitamin và khoáng chất, giúp cá phát triển khỏe mạnh và tăng cường sức đề kháng.', 155000, 5, 'tesla', 'Earth petcare');
 insert into Food(Ten, Anh, MoTa, Gia, MucGiamGia, NhaSanXuat, NhaCungCap) value ('Cám cá koi Kibakoi 2 trong 1', 'Cám cá koi Kibakoi 2 trong 1.jpg', 'Cám cá Kibakoi 2 trong 1 là một loại thức ăn chất lượng cao được thiết kế đặc biệt để cung cấp đầy đủ dinh dưỡng cho cá koi trong hồ ao của bạn. Đặc điểm nổi bật của cám này là tính đa dạng trong cung cấp dinh dưỡng, từ việc cung cấp nguồn protein cần thiết cho sự phát triển và tăng trưởng của cá, đến việc cung cấp các khoáng chất và vitamin giúp tăng cường sức khỏe và sắc đẹp cho cá koi..', 99000, 10, 'Kibakoi ', 'Việt petcare');
@@ -234,43 +234,47 @@ insert into Food(Ten, Anh, MoTa, Gia, MucGiamGia, NhaCungCap, NhaSanXuat) value 
 insert into Food(Ten, Anh, MoTa, Gia, MucGiamGia, NhaCungCap, NhaSanXuat) value ('Thức ăn Hạt cho Chó CAPTAIN cho chó kén ăn, trộn Bò - Cá Hồi, Phô mai', 'Thức ăn Hạt cho Chó CAPTAIN cho chó kén ăn, trộn Bò - Cá Hồi, Phô mai.jpg', 'CHÚNG TA RỒI SẼ HẠNH PHÚC, THEO NHỮNG CÁCH KHÁC NHAU là một lời nhắn nhủ của tác giả Thảo Thảo đến tất cả mọi người rằng mỗi chúng ta đều là một cá thể duy nhất trong vũ trụ bao la rộng lớn, đừng bao giờ cho người khác quyền mang lại niềm vui hay nỗi buồn cho bạn. Hãy sống với những gì bạn muốn, làm nhũng gì bạn cho là đúng, bởi nếu cứ sống vì người khác, bạn sẽ đánh mất những-gì-đặc-biệt-nhất của bản thân mình.', 86000, 12, 'NhaCungCap Văn học', 'Thanh Thảo');
 insert into Food(Ten, Anh, MoTa, Gia, MucGiamGia, NhaCungCap, NhaSanXuat) value ('THỨC ĂN HẠT MỀM CHÓ TRƯỞNG THÀNH ZENITH ADULT', 'THỨC ĂN HẠT MỀM CHÓ TRƯỞNG THÀNH ZENITH ADULT.jpg', 'Đối với những người trẻ được sống như ý không phải lúc nào cũng dễ dàng, đặc biệt với những người đã phải trải qua một quãng thời gian khó khăn rồi mới có thể tìm được con người thật của mình, là chính mình. Những câu chuyện tình của họ có nhiều dang dở vì những mặc cảm, rào cản, khao khát được làm điều mình muốn, gắn bó với người mình yêu thương cả đời là các mong ước nhỏ trong lòng. Để rồi khi không thể giãi bày cùng ai, họ mang những điều thầm kín thổi vào những vần thơ nơi chỉ có những “câu chuyện về nàng và tôi”.', 395000, 0, 'NhaCungCap Phụ Nữ Việt Nam', 'Nhiều tác giả');
 insert into Food(Ten, Anh, MoTa, Gia, MucGiamGia, NhaCungCap, NhaSanXuat) value ('Hạt Mềm Cho Chó con Zenith Puppy', 'Hạt Mềm Cho Chó con Zenith Puppy.jpg', 'Bạn có bao giờ hỏi ước mơ của bố mẹ là gì? Hoặc dù có hỏi bố mẹ cũng chỉ trả lời qua loa như “Làm gì có…”. Nhưng bạn biết không, làm gì có ai trên thế giới này không có ước mơ cơ chứ, chỉ là ước mơ của bố mẹ chúng ta được cất giấu rất sâu trong tim và đánh đổi bằng nụ cười của những đứa con mà thôi. Tại sao mẹ lại chẳng có nổi một ước mơ cho riêng mình? Phải chăng gánh vai mẹ đã quá mỏi mệt với cơm áo gạo tiền, với những bữa ăn và học phí của con. À không, mẹ có ước mơ đấy chứ. Mẹ ước mơ có một người bố, rồi mẹ cho nó cả một gia đình. Mẹ ước mơ được tới trường, nên mẹ cho nó học con chữ. Mẹ ước mơ được một bữa no, nên dẫu có phải đi làm vất vả khổ cực đến đâu mẹ cũng cho nó được bữa cơm ngon. Chỉ khác một điều, ước mơ của mẹ là các con mất rồi.', 89000, 5, 'NhaCungCap Văn Học', 'Hạ Mer');
+select  food.ID ,
+    food.Ten ,
+    food.Anh ,
+    food.MoTa ,
+    food.Gia ,
+    food.MucGiamGia ,
+    food.SoLuongDaBan ,
+    food.NhaCungCap ,
+    food.NhaSanXuat ,
+    food.DiemTrungBinh  from food,foodthuocdanhmuc,danhmuc where food.ID=foodthuocdanhmuc.IDFood and foodthuocdanhmuc.IDdanhmuc=danhmuc.ID and danhmuc.ten <> 'Thức ăn cho chó' ;
+select* from food;
+INSERT INTO FoodThuocDanhMuc (IDDanhMuc, IDFood) VALUES (3, 1);
+INSERT INTO FoodThuocDanhMuc (IDDanhMuc, IDFood) VALUES (3, 2);
 
-INSERT INTO FoodThuocDanhMuc VALUE (8,1);
-INSERT INTO FoodThuocDanhMuc VALUE (9,1);
-INSERT INTO FoodThuocDanhMuc VALUE (8,2);
-INSERT INTO FoodThuocDanhMuc VALUE (3,3);
-INSERT INTO FoodThuocDanhMuc VALUE (3,4);
-INSERT INTO FoodThuocDanhMuc VALUE (4,4);
-INSERT INTO FoodThuocDanhMuc VALUE (3,5);
-INSERT INTO FoodThuocDanhMuc VALUE (2,6);
-INSERT INTO FoodThuocDanhMuc VALUE (8,7);
-INSERT INTO FoodThuocDanhMuc VALUE (10,7);
-INSERT INTO FoodThuocDanhMuc VALUE (8,8);
-INSERT INTO FoodThuocDanhMuc VALUE (2,9);
-INSERT INTO FoodThuocDanhMuc VALUE (2,10);
-INSERT INTO FoodThuocDanhMuc VALUE (2,11);
-INSERT INTO FoodThuocDanhMuc VALUE (3,11);
-INSERT INTO FoodThuocDanhMuc VALUE (3,12);
-INSERT INTO FoodThuocDanhMuc VALUE (1,13);
-INSERT INTO FoodThuocDanhMuc VALUE (3,13);
-INSERT INTO FoodThuocDanhMuc VALUE (1,14);
-INSERT INTO FoodThuocDanhMuc VALUE (3,14);
-INSERT INTO FoodThuocDanhMuc VALUE (1,15);
-INSERT INTO FoodThuocDanhMuc VALUE (3,15);
-INSERT INTO FoodThuocDanhMuc VALUE (1,16);
-INSERT INTO FoodThuocDanhMuc VALUE (3,16);
-INSERT INTO FoodThuocDanhMuc VALUE (3,17);
-INSERT INTO FoodThuocDanhMuc VALUE (8,18);
-INSERT INTO FoodThuocDanhMuc VALUE (10,18);
-INSERT INTO FoodThuocDanhMuc VALUE (1,19);
-INSERT INTO FoodThuocDanhMuc VALUE (1,20);
-INSERT INTO FoodThuocDanhMuc VALUE (1,21);
-INSERT INTO FoodThuocDanhMuc VALUE (3,22);
-INSERT INTO FoodThuocDanhMuc VALUE (8,23);
-INSERT INTO FoodThuocDanhMuc VALUE (9,23);
-INSERT INTO FoodThuocDanhMuc VALUE (8,24);
-INSERT INTO FoodThuocDanhMuc VALUE (9,24);
+INSERT INTO FoodThuocDanhMuc (IDDanhMuc, IDFood) VALUES (2, 3);
 
+INSERT INTO FoodThuocDanhMuc (IDDanhMuc, IDFood) VALUES (2, 4);
+
+INSERT INTO FoodThuocDanhMuc (IDDanhMuc, IDFood) VALUES (2, 5);
+INSERT INTO FoodThuocDanhMuc (IDDanhMuc, IDFood) VALUES (2, 6);
+
+INSERT INTO FoodThuocDanhMuc (IDDanhMuc, IDFood) VALUES (2, 7);
+INSERT INTO FoodThuocDanhMuc (IDDanhMuc, IDFood) VALUES (2, 8);
+
+INSERT INTO FoodThuocDanhMuc (IDDanhMuc, IDFood) VALUES (2, 9);
+
+INSERT INTO FoodThuocDanhMuc (IDDanhMuc, IDFood) VALUES (1, 10);
+
+INSERT INTO FoodThuocDanhMuc (IDDanhMuc, IDFood) VALUES (1, 11);
+INSERT INTO FoodThuocDanhMuc (IDDanhMuc, IDFood) VALUES (1, 12);
+
+INSERT INTO FoodThuocDanhMuc (IDDanhMuc, IDFood) VALUES (1, 13);
+INSERT INTO FoodThuocDanhMuc (IDDanhMuc, IDFood) VALUES (1, 14);
+
+INSERT INTO FoodThuocDanhMuc (IDDanhMuc, IDFood) VALUES (2, 15);
+INSERT INTO FoodThuocDanhMuc (IDDanhMuc, IDFood) VALUES (1, 16);
+INSERT INTO FoodThuocDanhMuc (IDDanhMuc, IDFood) VALUES (1, 17);
+INSERT INTO FoodThuocDanhMuc (IDDanhMuc, IDFood) VALUES (1, 18);
+INSERT INTO FoodThuocDanhMuc (IDDanhMuc, IDFood) VALUES (1, 19);
+INSERT INTO FoodThuocDanhMuc (IDDanhMuc, IDFood) VALUES (1, 20);
+INSERT INTO FoodThuocDanhMuc (IDDanhMuc, IDFood) VALUES (1, 21);
 INSERT INTO KhachThemFood VALUE ('0903127256', 1, 2);
 INSERT INTO KhachThemFood VALUE ('0903127256', 2, 3);
 INSERT INTO KhachThemFood VALUE ('0913020447', 3, 1);
@@ -306,4 +310,4 @@ insert into DonHangCoFood(IDDonHang, IDFood, SoLuong, TongTien) value (2, 6, 1, 
 insert into DonHangCoFood(IDDonHang, IDFood, SoLuong, TongTien) value (3, 6, 1, 98000);
 insert into DonHangCoFood(IDDonHang, IDFood, SoLuong, TongTien) value (4, 6, 1, 98000);
 insert into DonHangCoFood(IDDonHang, IDFood, SoLuong, TongTien) value (5, 6, 1, 98000);
-select * from khachhang
+-- select * from khachhang

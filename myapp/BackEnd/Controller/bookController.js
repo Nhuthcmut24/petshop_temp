@@ -11,6 +11,43 @@ exports.getBooksForHomePage = (req, res) => {
     }
   });
 };
+// SELECT  food.ID ,food.Ten , food.Anh ,food.MoTa ,food.Gia ,food.MucGiamGia ,food.SoLuongDaBan ,food.NhaCungCap ,food.NhaSanXuat ,food.DiemTrungBinh  FROM food,foodthuocdanhmuc,danhmuc WHERE food.ID=foodthuocdanhmuc.IDFood and foodthuocdanhmuc.IDdanhmuc=danhmuc.ID and danhmuc.ten= 'Thức ăn cho chó' ;
+exports.getBooksDogForHomePage = (req, res) => {
+  const query =
+    "SELECT  food.ID ,food.Ten , food.Anh ,food.MoTa ,food.Gia ,food.MucGiamGia ,food.SoLuongDaBan ,food.NhaCungCap ,food.NhaSanXuat ,food.DiemTrungBinh  FROM food,foodthuocdanhmuc,danhmuc WHERE food.ID=foodthuocdanhmuc.IDFood and foodthuocdanhmuc.IDdanhmuc=danhmuc.ID and danhmuc.ten= 'Thức ăn cho chó' ;";
+  db.query(query, (error, results) => {
+    if (error) {
+      console.error("Error executing query:", error);
+      res.status(500).send("Internal Server Error");
+    } else {
+      res.json(results);
+    }
+  });
+};
+exports.getBooksCatForHomePage = (req, res) => {
+  const query =
+    "SELECT  food.ID ,food.Ten , food.Anh ,food.MoTa ,food.Gia ,food.MucGiamGia ,food.SoLuongDaBan ,food.NhaCungCap ,food.NhaSanXuat ,food.DiemTrungBinh  FROM food,foodthuocdanhmuc,danhmuc WHERE food.ID=foodthuocdanhmuc.IDFood and foodthuocdanhmuc.IDdanhmuc=danhmuc.ID and danhmuc.ten= 'Thức ăn cho mèo' ;";
+  db.query(query, (error, results) => {
+    if (error) {
+      console.error("Error executing query:", error);
+      res.status(500).send("Internal Server Error");
+    } else {
+      res.json(results);
+    }
+  });
+};
+exports.getBooksOtherForHomePage = (req, res) => {
+  const query =
+    "SELECT  food.ID ,food.Ten , food.Anh ,food.MoTa ,food.Gia ,food.MucGiamGia ,food.SoLuongDaBan ,food.NhaCungCap ,food.NhaSanXuat ,food.DiemTrungBinh  FROM food,foodthuocdanhmuc,danhmuc WHERE food.ID=foodthuocdanhmuc.IDFood and foodthuocdanhmuc.IDdanhmuc=danhmuc.ID and danhmuc.ten <> 'Thức ăn cho mèo' and danhmuc.ten <> 'Thức ăn cho chó' ;";
+  db.query(query, (error, results) => {
+    if (error) {
+      console.error("Error executing query:", error);
+      res.status(500).send("Internal Server Error");
+    } else {
+      res.json(results);
+    }
+  });
+};
 
 exports.search = (req, res) => {
   const searchTerm = req.query.q;

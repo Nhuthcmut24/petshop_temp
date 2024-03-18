@@ -32,7 +32,7 @@
   height: 44px;
   justify-content: center;
   flex-shrink: 0;
-  color: #fff;
+  color: rgb(80, 50, 202);
   font-size: 40px;
   font-style: normal;
   font-weight: 700;
@@ -40,14 +40,14 @@
   letter-spacing: -0.6px;
   align-items: center;
   justify-content: center;
-  text-shadow: 0px 4px 4px #5081ff;
+  /* text-shadow: 0px 4px 4px #5081ff; */
 }
 .loginForm {
   width: 614px;
   height: 440px;
   flex-shrink: 0;
   border-radius: 10px;
-  border: 1px solid #ff2020;
+  border: 2px solid #000;
   display: grid;
   gap: 0px;
   align-items: center;
@@ -69,7 +69,7 @@
 .loginForm .usernameInput,
 .loginForm .passwordInput {
   border: none;
-  border-bottom: 1px solid;
+  border-bottom: 2px solid;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -78,6 +78,7 @@
   width: 577px;
   height: 71px;
   flex-shrink: 0;
+  margin-left: 10px;
 }
 .loginForm .usernameInput:focus {
   outline: none;
@@ -94,6 +95,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-left: 5px;
 }
 .loginForm div a {
   color: #4b8dbd;
@@ -114,7 +116,7 @@
   height: 63px;
   flex-shrink: 0;
   border-radius: 60px;
-  border: 1px solid #000;
+  border: #76abae;
   color: #000;
   font-size: 20px;
   font-style: normal;
@@ -138,7 +140,7 @@
   height: 440px;
   border-radius: 10px;
   border: 2px solid #000;
-  background-color: #65a3ff;
+  /* background-color: #31363f; */
   display: grid;
   text-align: center;
   align-items: stretch;
@@ -154,7 +156,7 @@
   width: 100%;
   height: 100%;
   opacity: 0.5;
-  background-image: url(./images/whiteCloud.jpg);
+  /* background-image: url(./images/whiteCloud.jpg); */
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-size: cover;
@@ -167,7 +169,7 @@
 }
 
 .signupWelcome h2 {
-  color: #fff2f2;
+  color: #000;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
   font-size: 35px;
   font-style: normal;
@@ -179,7 +181,7 @@
 }
 
 .signupWelcome p {
-  color: #fff;
+  color: #000;
   font-size: 25px;
   font-style: normal;
   font-weight: 700;
@@ -213,9 +215,11 @@
 }
 
 .signupWelcome .signupButton:hover {
-  color: rgba(180, 176, 176);
+  color: rgb(227, 213, 213);
 }
-
+.loginForm .loginButton:hover {
+  color: rgb(238, 35, 35);
+}
 .displayLoginForm {
   display: grid;
   grid-template-columns: 614px 614px;

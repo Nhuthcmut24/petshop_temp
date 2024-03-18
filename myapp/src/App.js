@@ -18,7 +18,9 @@ import Xacnhandon from "./Pages/Xacnhandon";
 import Quanlisanpham from "./Pages/Quanlisanpham";
 import Thongtincanhan from "./Pages/Thongtincanhan";
 import Thongtinkh from "./Pages/Thongtinkh";
-
+import Thucanchocho from "./Pages/Thucanchocho";
+import Thucanchomeo from "./Pages/Thucanchomeo";
+import Thucankhac from "./Pages/Thucankhac";
 function App() {
   return (
     <div className="App">
@@ -26,6 +28,9 @@ function App() {
         <SearchProvider>
           <Routes>
             <Route path="/" element={<Trangchu />} />
+            <Route path="/thucanchocho" element={<Thucanchocho />} />
+            <Route path="/thucanchomeo" element={<Thucanchomeo />} />
+            <Route path="/thucankhac" element={<Thucankhac />} />
             <Route path="/giohang" element={<Giohang />} />
             <Route path="/dangnhap" element={<Dangnhap />} />
             <Route path="/dangky" element={<Dangky />} />

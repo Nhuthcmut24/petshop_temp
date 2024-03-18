@@ -15,11 +15,14 @@ header nav,
   height: 100%;
 }
 .logoPETFOOD {
-  width: 171px;
-  height: 121px;
+  width: 120px;
+  height: 80px;
   margin: 0px;
   flex-shrink: 0;
   margin-right: 0px;
+}
+.logoPETFOOD:hover {
+  transform: scale(1.03); /* Scale the image on hover */
 }
 .logoo {
   display: flex;
@@ -32,8 +35,8 @@ header nav,
   left: -25px;
 }
 nav .logoo {
-  color: #003bba;
-  font-size: 30px;
+  color: #060b15;
+  font-size: 25px;
   font-style: normal;
   font-weight: 400;
   line-height: 120px;
@@ -79,7 +82,7 @@ header nav .menu ul li a {
 header nav .menu ul li a:hover {
   text-decoration: none;
   /* background: #038AD7; */
-  color: #ff3030;
+  color: #eeeeee;
 }
 header nav .menu .search-bar {
   align-items: center;

@@ -14,7 +14,7 @@ const db = require("../db");
 exports.getCart = (req, res) => {
   const username = req.params.username;
   const query =
-    "SELECT IDFood, Anh, Ten, TacGia, NXB, Gia, SoLuong, MucGiamGia FROM khachhang, khachthemFood, Food WHERE TenDangNhap=? AND khachhang.SoDienThoai=khachthemFood.SoDienThoai AND khachthemFood.IDFood=Food.ID";
+    "SELECT IDFood, Anh, Ten, NhaSanXuat, NhaCungCap, Gia, SoLuong, MucGiamGia FROM khachhang, khachthemFood, Food WHERE TenDangNhap=? AND khachhang.SoDienThoai=khachthemFood.SoDienThoai AND khachthemFood.IDFood=Food.ID";
   db.query(query, [username], (error, results) => {
     if (error) throw error;
 

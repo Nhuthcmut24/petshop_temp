@@ -50,20 +50,20 @@ function Sideboard() {
               <Link to="/">Tất cả</Link>
             </li>
             <li>
-              <Link to="/">Thức ăn cho chó</Link>
+              <Link to="/Thucanchocho">Thức ăn cho chó</Link>
             </li>
             <li>
-              <Link to="/">Thức ăn cho mèo</Link>
+              <Link to="/Thucanchomeo">Thức ăn cho mèo</Link>
             </li>
             <li>
-              <Link to="/">Thức ăn cho cá</Link>
+              <Link to="/Thucankhac">Thức ăn cho khác</Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="/">Truyện tranh</Link>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <Link to="/">Sách tham khảo</Link>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>

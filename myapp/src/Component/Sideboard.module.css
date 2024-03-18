@@ -1,76 +1,76 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-*{
-    font-family: 'Roboto', sans-serif;
+* {
+  font-family: "Roboto", sans-serif;
 }
 .sideboard .sideboardele {
-    padding: 0px;
-    position: absolute;
-    /* left: 0px; */
-    background: rgba(27, 27, 27, 0.95);
-    /* border-radius: 10px; */
-    font-size: 25px;
-    width: 200px;
-    /* margin-left: 60px; */
-    text-align: center;
-    /* align-items: center; */
-    height: 820px;
-
+  padding: 0px;
+  position: absolute;
+  /* left: 0px; */
+  background: #222831;
+  /* border-radius: 10px; */
+  font-size: 25px;
+  width: 200px;
+  /* margin-left: 60px; */
+  text-align: center;
+  /* align-items: center; */
+  height: 820px;
 }
 
 .sideboard .sideboardele p {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .sideboardele ul {
-    list-style: none;
-    padding: 0px;
-    /* margin: 5px; */
-    display: grid;
-    /* row-gap: 8px; */
-    font-size: 20px;
+  list-style: none;
+  padding: 0px;
+  /* margin: 5px; */
+  display: grid;
+  /* row-gap: 8px; */
+  font-size: 20px;
 }
-.sideboardele ul li a{
-    text-decoration: none;
+.sideboardele ul li a {
+  text-decoration: none;
 }
-.sideboardele ul a{
-    color: white;
-    text-align: center;
-}
-.sideboardele ul li{
-    padding: 0.4rem;
-    border-radius: 3px;
-    margin: 8px 0;
+.sideboardele ul a {
+  color: white;
+  text-align: center;
 }
 .sideboardele ul li {
-    transition: all 0.5s ease;
-    cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 3px;
+  margin: 8px 0;
+}
+.sideboardele ul li {
+  transition: all 0.5s ease;
+  cursor: pointer;
 }
 
-.sideboardele ul li:hover, .active {
-    background:#dfdfdfc3;
-    transform: matrix(1, 0, 0, 1, 7, 0);
+.sideboardele ul li:hover,
+.active {
+  background: #dfdfdfc3;
+  transform: matrix(1, 0, 0, 1, 0, 0);
 }
 
-.searchBar{
-    height:50px;
-    width: 100%;
-    background: rgba(206, 0, 0, 0.859);
+.searchBar {
+  height: 50px;
+  width: 100%;
+  background: #76abae;
 }
-.searchBar .searchInput{
-    position: absolute;
-    width: 250px;
-    height: 35px;
-    padding: 5px;
-    margin: 7px;
-    left: 200px;
-    border: none;
-    /* border-radius: 10px; */
-    flex-shrink: 0;
-    border-bottom: 2px solid;
-    border-radius: 4px;
-    background: rgba(255, 255, 255, 0.859);
+.searchBar .searchInput {
+  position: absolute;
+  width: 250px;
+  height: 35px;
+  padding: 5px;
+  margin: 7px;
+  left: 200px;
+  border: none;
+  /* border-radius: 10px; */
+  flex-shrink: 0;
+  border-bottom: 2px solid;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.859);
 }
-.searchInput:focus{
-    outline:none;
+.searchInput:focus {
+  outline: none;
 }

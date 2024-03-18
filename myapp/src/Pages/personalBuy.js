@@ -1,45 +1,45 @@
 //import logo from './logo.svg';
-import styles from '../Styles/personalBuy.module.css';
-import React, { useState, useEffect } from 'react';
-import Header from '../Component/logHeader.js';
+import styles from "../Styles/personalBuy.module.css";
+import React, { useState, useEffect } from "react";
+import Header from "../Component/logHeader.js";
 // import Header from '../Component/Header.js';
-import Footer from '../Component/Footer.js';
-import Sidebar from '../Component/sideBar.js';
-import Table from 'react-bootstrap/Table';
-import { useAuth } from '../AuthContext.js';
-import { Link } from 'react-router-dom';
+import Footer from "../Component/Footer.js";
+import Sidebar from "../Component/sideBar.js";
+import Table from "react-bootstrap/Table";
+import { useAuth } from "../AuthContext.js";
+import { Link } from "react-router-dom";
 
 const getStatusClass = (status) => {
   switch (status) {
-    case 'Đã giao':
-      return 'DaGiao';
-    case 'Đang giao':
-      return 'DangGiao';
-    case 'Đã hủy':
-      return 'DaHuy';
-    case 'Đang xử lý':
-      return 'DangXuLy';
-    case 'Chờ thanh toán':
-      return 'ChoThanhToan';
-    case 'Đã thanh toán':
-      return 'DaThanhToan';
-    case 'Yêu cầu hủy đơn':
-      return 'YeuCauHuyDon';
+    case "Đã giao":
+      return "DaGiao";
+    case "Đang giao":
+      return "DangGiao";
+    case "Đã hủy":
+      return "DaHuy";
+    case "Đang xử lý":
+      return "DangXuLy";
+    case "Chờ thanh toán":
+      return "ChoThanhToan";
+    case "Đã thanh toán":
+      return "DaThanhToan";
+    case "Yêu cầu hủy đơn":
+      return "YeuCauHuyDon";
     default:
-      return ''; // Không có class nếu không có trạng thái nào khớp
+      return ""; // Không có class nếu không có trạng thái nào khớp
   }
 };
 
 function PersonalBuy() {
-  const {userInfo} = useAuth();
-  const [data, setData] = useState([]); 
-  const [filter, setFilter] = useState('Tất cả'); // State để lưu giá trị filter, mặc định là '0' (Tất cả)
+  const { userInfo } = useAuth();
+  const [data, setData] = useState([]);
+  const [filter, setFilter] = useState("Tất cả"); // State để lưu giá trị filter, mặc định là '0' (Tất cả)
   const handleFilterChange = (e) => {
     setFilter(e.target.value);
   };
   useEffect(() => {
     fetch(`http://localhost:3001/api/orderList/${userInfo.username}`)
-      .then(res => res.json())
+      .then((res) => res.json())
       .then(
         (result) => {
           setData(result);
@@ -47,13 +47,17 @@ function PersonalBuy() {
         (error) => {
           console.log(error);
         }
-      )
-  } ,[])
+      );
+  }, []);
 
   // Lọc dữ liệu theo giá trị của dropdown
   const filteredData =
-    filter === 'Tất cả' ? data : data.filter(item => item.XacNhan.toLowerCase() === filter.toLowerCase());
-  const filterDropdown =
+    filter === "Tất cả"
+      ? data
+      : data.filter(
+          (item) => item.XacNhan.toLowerCase() === filter.toLowerCase()
+        );
+  const filterDropdown = (
     <div className={styles.filterDropdown}>
       <select onChange={handleFilterChange} value={filter}>
         <option value="Tất cả">Tất cả</option>
@@ -66,8 +70,9 @@ function PersonalBuy() {
         <option value="Yêu cầu hủy đơn">Yêu cầu hủy đơn</option>
       </select>
     </div>
+  );
 
-  const orderedTable =
+  const orderedTable = (
     <Table className={styles.orderedTable}>
       <div className={styles.tableContainer}>
         <thead>
@@ -84,12 +89,15 @@ function PersonalBuy() {
               <td>{item.XacNhan}</td>
               <td>{item.ID}</td>
               <td>{item.NgayTao}</td>
-              <td><Link to={`/xemchitiet/${item.ID}`}>Xem chi tiết</Link></td>
+              <td>
+                <Link to={`/xemchitiet/${item.ID}`}>Xem chi tiết</Link>
+              </td>
             </tr>
           ))}
         </tbody>
       </div>
     </Table>
+  );
   return (
     <React.Fragment>
       <Header />

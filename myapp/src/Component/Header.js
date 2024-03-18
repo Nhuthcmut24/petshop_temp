@@ -12,13 +12,22 @@ function Header() {
   const [openProfile, setOpenProfile] = useState(false);
 
   const { userInfo, isAdmin } = useAuth();
-
+  const handlePetFoodClick = () => {
+    // Navigate to the homepage when PETFOOD is clicked
+    window.location.href = "/";
+  };
   return (
     <header>
       <nav>
         <div className={styles.menu}>
           <div className={styles.logoo}>
-            <img className={styles.logoPETFOOD} src={logo} alt="PETFOOD" />
+            <img
+              className={styles.logoPETFOOD}
+              src={logo}
+              alt="PETFOOD"
+              onClick={handlePetFoodClick}
+            />
+
             <h2>PETFOOD</h2>
           </div>
           {/* <Link className={styles.cart" to='/giohang'>
