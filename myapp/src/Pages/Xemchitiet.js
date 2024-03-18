@@ -119,7 +119,7 @@ const ViewDetails = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ state: "Yêu cầu hủy đơn" }),
+        body: JSON.stringify({ state: "Đơn hàng bị hủy" }),
       })
         .then((res) => res.json())
         .then(
@@ -223,7 +223,7 @@ const ViewDetails = () => {
               books[0].XacNhan !== "Đã hủy" &&
               books[0].XacNhan !== "Đã giao" &&
               books[0].XacNhan !== "Đang giao" &&
-              books[0].XacNhan !== "Yêu cầu hủy đơn" && (
+              books[0].XacNhan !== "Đơn hàng bị hủy" && (
                 <button className={styles.buttonDetails_4} onClick={openModal}>
                   Hủy đơn
                 </button>

@@ -36,14 +36,15 @@ function Header() {
                     </a> */}
           <ul>
             <li>
+              <Link to="/">TRANG CHỦ</Link>
+            </li>
+            <li>
               <Link to="/giohang">GIỎ HÀNG</Link>
             </li>
             <li>
               <Link to="/">YÊU THÍCH</Link>
             </li>
-            <li>
-              <Link to="/">TRANG CHỦ</Link>
-            </li>
+
             <li>
               {loggedIn ? (
                 <Link to="/"> TÀI KHOẢN</Link>

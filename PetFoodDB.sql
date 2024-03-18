@@ -194,6 +194,32 @@ BEGIN
     
 END //
 
+
+CREATE PROCEDURE XacNhanDonHang(
+    p_SoDienThoai CHAR(10)
+)
+BEGIN
+    DECLARE p_XacNhan CHAR(20);
+    DECLARE p_DiaChi VARCHAR(1000);
+    DECLARE IDDonHang INT;
+
+    SET p_XacNhan = 'Đang xử lý';
+    SET p_DiaChi = (SELECT DiaChi FROM KhachHang WHERE SoDienThoai = p_SoDienThoai);
+    
+    INSERT INTO DonHang (SoDienThoai, TongTien, NgayTao, XacNhan, DiaChi) VALUE (p_SoDienThoai, p_TongTien, NOW(), p_XacNhan, p_DiaChi);
+    
+    SET IDDonHang = LAST_INSERT_ID();
+    
+    INSERT INTO DonHangCoFood (IDDonHang, IDFood, SoLuong, TongTien)
+    SELECT IDDonHang, IDFood, SoLuong, (Gia * (100 - MucGiamGia) / 100) * SoLuong
+    FROM KhachThemFood KTS
+    JOIN Food S ON KTS.IDFood = S.ID
+    WHERE KTS.SoDienThoai = p_SoDienThoai;
+    
+    DELETE FROM KhachThemFood WHERE SoDienThoai = p_SoDienThoai;
+    
+END //
+
 DELIMITER ;
 
 INSERT INTO KhachHang VALUE ('tienhuynh', '0903127256', '12345678', 'Huỳnh Văn Tiến', '2000/05/06', 'M', 'huynhvtien@gmail.com', '64 Nguyễn Đình Chính, P15, Q.Phú Nhuận, TP.HCM', NOW(), NOW());

@@ -39,14 +39,15 @@ function Header() {
           {loggedIn ? (
             <ul>
               <li>
+                <Link to="/">TRANG CHỦ</Link>
+              </li>
+              <li>
                 <Link to="/giohang">GIỎ HÀNG</Link>
               </li>
               <li>
                 <Link to="/">YÊU THÍCH</Link>
               </li>
-              <li>
-                <Link to="/">TRANG CHỦ</Link>
-              </li>
+
               <li>
                 <Link onClick={() => setOpenProfile((prevState) => !prevState)}>
                   TÀI KHOẢN
@@ -56,14 +57,15 @@ function Header() {
           ) : (
             <ul>
               <li>
+                <Link to="/">TRANG CHỦ</Link>
+              </li>
+              <li>
                 <Link to="/dangnhap">GIỎ HÀNG</Link>
               </li>
               <li>
                 <Link to="/dangnhap">YÊU THÍCH</Link>
               </li>
-              <li>
-                <Link to="/">TRANG CHỦ</Link>
-              </li>
+
               <li>
                 <Link to="/dangnhap">ĐĂNG NHẬP</Link>
               </li>

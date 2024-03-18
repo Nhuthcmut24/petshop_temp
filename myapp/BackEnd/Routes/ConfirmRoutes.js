@@ -1,7 +1,7 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const ConfirmController = require('../Controller/ConfirmController');
+const ConfirmController = require("../Controller/ConfirmController");
 
-router.post('/Confirm', ConfirmController.Confirm);
+router.put("/Confirm", ConfirmController.Confirm);
 
 module.exports = router;

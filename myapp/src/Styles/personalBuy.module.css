@@ -1,65 +1,66 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 .filterDropdown select {
-  position:  absolute;
-  font-family:'Roboto', sans-serif;
+  position: absolute;
+  font-family: "Roboto", sans-serif;
   font-size: 20px;
   left: 320px;
   top: 140px;
   height: 45px;
   width: 180px;
   letter-spacing: -0.24px;
-  border-radius:9px;
+  border-radius: 9px;
 
   /* padding: 10px; */
   /* text-align: */
 }
-.filterDropdown{
+.filterDropdown {
   border: 3px solid #ccc;
 }
-.orderedTable{
+.orderedTable {
   position: absolute;
   top: 200px;
   left: 320px;
   width: 920px;
-  border: 2px solid #91B0FF;
+  border: 2px solid #91b0ff;
   border-collapse: collapse;
   text-align: center;
   background-color: #ffffff;
 }
-.orderedTable td{
+.orderedTable td {
   height: 100px;
   width: 1140px;
 }
-.orderedTable tr[class="DaGiao"] td:first-child{
+.orderedTable tr[class="DaGiao"] td:first-child {
   background-color: #5fff50;
 }
-.orderedTable tr[class="DangGiao"] td:first-child{
+.orderedTable tr[class="DangGiao"] td:first-child {
   background-color: rgb(255, 255, 11);
 }
-.orderedTable tr[class="YeuCauHuyDon"] td:first-child{
+.orderedTable tr[class="DonHangBiHuy"] td:first-child {
   background-color: rgb(215, 61, 19);
 }
-.orderedTable tr[class="DaHuy"] td:first-child{
+.orderedTable tr[class="DaHuy"] td:first-child {
   background-color: rgb(255, 69, 69);
 }
-.orderedTable tr[class="DangXuLy"] td:first-child{
+.orderedTable tr[class="DangXuLy"] td:first-child {
   background-color: rgb(255, 166, 22);
 }
-.orderedTable tr[class="ChoThanhToan"] td:first-child{
+.orderedTable tr[class="ChoThanhToan"] td:first-child {
   background-color: rgb(69, 252, 255);
 }
-.orderedTable tr[class="DaThanhToan"] td:first-child{
+.orderedTable tr[class="DaThanhToan"] td:first-child {
   background-color: rgb(69, 255, 159);
 }
-th, td{
+th,
+td {
   border: 3px solid #000000;
   border-collapse: collapse;
 }
-a{
+a {
   /* text-decoration: none; */
   color: #1d5dff;
 }
-a:hover{
+a:hover {
   color: rgb(226, 8, 8);
 }
 .tableContainer {

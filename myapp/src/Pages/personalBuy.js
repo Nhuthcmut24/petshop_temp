@@ -23,8 +23,8 @@ const getStatusClass = (status) => {
       return "ChoThanhToan";
     case "Đã thanh toán":
       return "DaThanhToan";
-    case "Yêu cầu hủy đơn":
-      return "YeuCauHuyDon";
+    case "Đơn hàng bị hủy":
+      return "DonHangBiHuy";
     default:
       return ""; // Không có class nếu không có trạng thái nào khớp
   }

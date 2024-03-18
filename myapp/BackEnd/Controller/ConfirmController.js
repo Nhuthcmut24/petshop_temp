@@ -1,16 +1,15 @@
-exports.Confirm = async (req, res, next) => {
-  try {
-    const query1 = `
+const db = require("../db");
+
+exports.Confirm = async (req, res) => {
+  const query1 = `
       UPDATE donhang
-      SET XacNhan = ?,
+      SET XacNhan = 'Xác nhận đơn hàng'
       WHERE ID = ?
     `;
-
-    const { confirm } = req.body;
-    const value = [confirm];
-    const result = await query(query1, value);
-    res.status(200).json({ message: "Thành công" });
-  } catch (error) {
-    next(error);
-  }
+  const orderID = req.body.orderID; // Corrected typo: oderID -> orderID
+  db.query(query1, [orderID], (error, results) => {
+    if (error) throw error;
+    res.json(results);
+    console.log(results);
+  });
 };
