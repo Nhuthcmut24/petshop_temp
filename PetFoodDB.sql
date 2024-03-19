@@ -360,3 +360,5 @@ insert into DonHangCoFood(IDDonHang, IDFood, SoLuong, TongTien) value (3, 6, 1, 
 insert into DonHangCoFood(IDDonHang, IDFood, SoLuong, TongTien) value (4, 6, 1, 98000);
 insert into DonHangCoFood(IDDonHang, IDFood, SoLuong, TongTien) value (5, 6, 1, 98000);
 -- select * from khachhang
+SELECT * FROM Food;
+SELECT * FROM Food WHERE LOWER(Ten) LIKE LOWER('%chó%') OR LOWER(NhaSanXuat) LIKE LOWER('%chó%');

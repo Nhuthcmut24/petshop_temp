@@ -36,7 +36,7 @@ function Sideboard() {
           <input
             className={styles.searchInput}
             type="text"
-            placeholder="Nhập tên petfood bạn muốn tìm"
+            placeholder="Nhập tên petfood, nhà sản xuất muốn tìm"
             value={searchInput}
             onChange={handleSearchInputChange}
             onKeyDown={handleKeyDown}

@@ -11,7 +11,6 @@ exports.getBooksForHomePage = (req, res) => {
     }
   });
 };
-// SELECT  food.ID ,food.Ten , food.Anh ,food.MoTa ,food.Gia ,food.MucGiamGia ,food.SoLuongDaBan ,food.NhaCungCap ,food.NhaSanXuat ,food.DiemTrungBinh  FROM food,foodthuocdanhmuc,danhmuc WHERE food.ID=foodthuocdanhmuc.IDFood and foodthuocdanhmuc.IDdanhmuc=danhmuc.ID and danhmuc.ten= 'Thức ăn cho chó' ;
 exports.getBooksDogForHomePage = (req, res) => {
   const query =
     "SELECT  food.ID ,food.Ten , food.Anh ,food.MoTa ,food.Gia ,food.MucGiamGia ,food.SoLuongDaBan ,food.NhaCungCap ,food.NhaSanXuat ,food.DiemTrungBinh  FROM food,foodthuocdanhmuc,danhmuc WHERE food.ID=foodthuocdanhmuc.IDFood and foodthuocdanhmuc.IDdanhmuc=danhmuc.ID and danhmuc.ten= 'Thức ăn cho chó' ;";
@@ -24,6 +23,7 @@ exports.getBooksDogForHomePage = (req, res) => {
     }
   });
 };
+
 exports.getBooksCatForHomePage = (req, res) => {
   const query =
     "SELECT  food.ID ,food.Ten , food.Anh ,food.MoTa ,food.Gia ,food.MucGiamGia ,food.SoLuongDaBan ,food.NhaCungCap ,food.NhaSanXuat ,food.DiemTrungBinh  FROM food,foodthuocdanhmuc,danhmuc WHERE food.ID=foodthuocdanhmuc.IDFood and foodthuocdanhmuc.IDdanhmuc=danhmuc.ID and danhmuc.ten= 'Thức ăn cho mèo' ;";
@@ -36,6 +36,7 @@ exports.getBooksCatForHomePage = (req, res) => {
     }
   });
 };
+
 exports.getBooksOtherForHomePage = (req, res) => {
   const query =
     "SELECT  food.ID ,food.Ten , food.Anh ,food.MoTa ,food.Gia ,food.MucGiamGia ,food.SoLuongDaBan ,food.NhaCungCap ,food.NhaSanXuat ,food.DiemTrungBinh  FROM food,foodthuocdanhmuc,danhmuc WHERE food.ID=foodthuocdanhmuc.IDFood and foodthuocdanhmuc.IDdanhmuc=danhmuc.ID and danhmuc.ten <> 'Thức ăn cho mèo' and danhmuc.ten <> 'Thức ăn cho chó' ;";
@@ -53,7 +54,7 @@ exports.search = (req, res) => {
   const searchTerm = req.query.q;
 
   const query =
-    "SELECT * FROM Food WHERE LOWER(Ten) LIKE LOWER(?) OR LOWER(TacGia) LIKE LOWER(?)";
+    "SELECT * FROM Food WHERE LOWER(Ten) LIKE LOWER(?) OR LOWER(NhaSanXuat) LIKE LOWER(?)";
   const params = [`%${searchTerm}%`, `%${searchTerm}%`];
 
   db.query(query, params, (error, results) => {
@@ -63,10 +64,10 @@ exports.search = (req, res) => {
 };
 
 exports.getProductDetails = (req, res) => {
-  const bookId = req.params.bookId;
+  const foodId = req.params.bookId;
 
   const query = "SELECT * FROM Food WHERE ID = ?";
-  const params = [bookId];
+  const params = [foodId];
 
   db.query(query, params, (error, results) => {
     if (error) throw error;

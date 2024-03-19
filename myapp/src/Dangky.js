@@ -1,14 +1,14 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
-import Header from './Component/Header.js';
-import Footer from './Component/Footer.js';
+import Header from "./Component/Header.js";
+import Footer from "./Component/Footer.js";
 //import Dangnhap from './Dangnhap.js';
-import styles from './Dangky.module.css';
+import styles from "./Dangky.module.css";
 
-import { useState } from 'react';
-import axios from 'axios';
-import Modal from 'react-modal';
+import { useState } from "react";
+import axios from "axios";
+import Modal from "react-modal";
 
 function SignupTitle() {
   return (
@@ -20,14 +20,14 @@ function SignupTitle() {
 
 function SignupForm() {
   const [formData, setFormData] = useState({
-    username: '',
-    password: '',
-    confirmPassword: '',
-    phoneNumber: '',
+    username: "",
+    password: "",
+    confirmPassword: "",
+    phoneNumber: "",
   });
 
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [modalContent, setModalContent] = useState('');
+  const [modalContent, setModalContent] = useState("");
 
   const handleChange = (e) => {
     setFormData({
@@ -40,20 +40,23 @@ function SignupForm() {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:3001/api/signup', formData);
+      const response = await axios.post(
+        "http://localhost:3001/api/signup",
+        formData
+      );
       console.log(response.data);
       setIsModalOpen(true);
-      setModalContent('Đăng ký thành công!');
+      setModalContent("Đăng ký thành công!");
     } catch (error) {
-      console.error('Đã có lỗi xảy ra', error);
+      console.error("Đã có lỗi xảy ra", error);
       setIsModalOpen(true);
-      setModalContent('Đã có lỗi xảy ra. Vui lòng thử lại!');
+      setModalContent("Đã có lỗi xảy ra. Vui lòng thử lại!");
     }
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
-    setModalContent('');
+    setModalContent("");
   };
 
   return (
@@ -62,33 +65,33 @@ function SignupForm() {
       <form onSubmit={handleSubmit}>
         <input
           className={styles.usernameInput}
-          name='username'
-          type='text'
-          placeholder='Hãy nhập tên đăng nhập'
+          name="username"
+          type="text"
+          placeholder="Hãy nhập tên đăng nhập"
           onChange={handleChange}
         />
         <input
           className={styles.passwordInput}
-          name='password'
-          type='password'
-          placeholder='Nhập mật khẩu'
+          name="password"
+          type="password"
+          placeholder="Nhập mật khẩu"
           onChange={handleChange}
         />
         <input
           className={styles.passwordReInput}
-          name='confirmPassword'
-          type='password'
-          placeholder='Nhập lại mật khẩu'
+          name="confirmPassword"
+          type="password"
+          placeholder="Nhập lại mật khẩu"
           onChange={handleChange}
         />
         <input
           className={styles.phoneInput}
-          name='phoneNumber'
-          type='text'
-          placeholder='Nhập số điện thoại của bạn'
+          name="phoneNumber"
+          type="text"
+          placeholder="Nhập số điện thoại của bạn"
           onChange={handleChange}
         />
-        <button className={styles.signupButton} type='submit'>
+        <button className={styles.signupButton} type="submit">
           Đăng ký
         </button>
       </form>
@@ -96,30 +99,25 @@ function SignupForm() {
         className={styles.signupPopup}
         isOpen={isModalOpen}
         onRequestClose={closeModal}
-        contentLabel='Thông báo'
-        appElement={document.getElementById('root')}
+        contentLabel="Thông báo"
+        appElement={document.getElementById("root")}
       >
         <div className={styles.popupContent}>{modalContent}</div>
         <div>
-          <button onClick={closeModal}
-           className={styles.popupButton}
-          >Đóng</button>
+          <button onClick={closeModal} className={styles.popupButton}>
+            Đóng
+          </button>
         </div>
       </Modal>
     </div>
   );
 }
 
-
 function LoginWelcome() {
   return (
     <div className={styles.loginWelcome}>
-      <h2>
-        Bạn đã từng đến đây?
-      </h2>
-      <p>
-        Hãy đăng nhập tại đây.
-      </p>
+      <h2>Bạn đã từng đến đây?</h2>
+      <p>Hãy đăng nhập tại đây.</p>
       <div className={styles.loginButton}>
         <Link to="/Dangnhap" className={styles.loginLink}>
           ĐĂNG NHẬP

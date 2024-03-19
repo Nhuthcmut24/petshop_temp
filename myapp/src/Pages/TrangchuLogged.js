@@ -1,22 +1,22 @@
 //import logo from './logo.svg';
-import React from 'react';
+import React from "react";
 
 // import '../Styles/Trangchu.css';
-import namiya from '../images/namiya.jpg';
-import nxc1ct from '../images/nxc1ct.jpg';
-import vncncd from '../images/vncncd.jpg';
-import yThien from '../images/yThien.jpg';
-import osho from '../images/osho-tu-ton.jpg';
-import toancc from '../images/toancc.webp';
-import grammar from '../images/grammar.webp';
-import ketoanviahe from '../images/ktvh.png';
-import nonggian from '../images/nglbn.webp';
-import tddn from '../images/tddn.jpg';
-import tiengnguoitrongvan from '../images/tiengnguoitrongvan.jpg';
-import voting from '../images/voting.png';
+import namiya from "../images/namiya.jpg";
+import nxc1ct from "../images/nxc1ct.jpg";
+import vncncd from "../images/vncncd.jpg";
+import yThien from "../images/yThien.jpg";
+import osho from "../images/osho-tu-ton.jpg";
+import toancc from "../images/toancc.webp";
+import grammar from "../images/grammar.webp";
+import ketoanviahe from "../images/ktvh.png";
+import nonggian from "../images/nglbn.webp";
+import tddn from "../images/tddn.jpg";
+import tiengnguoitrongvan from "../images/tiengnguoitrongvan.jpg";
+import voting from "../images/voting.png";
 // import Header from '../Component/logHeader.js';
-import Header from '../Component/logHeader.js';
-import Footer from '../Component/Footer.js';
+import Header from "../Component/logHeader.js";
+import Footer from "../Component/Footer.js";
 
 function Product(props) {
   return (
@@ -32,10 +32,18 @@ function Product(props) {
           <p>{props.price}</p>
         </li>
       </ul> */}
-      <p className="p-voting">{props.vote}<span><img className="star-voting" src={voting} /></span></p>
-      <p>{props.price}<sup>đ</sup></p>
+      <p className="p-voting">
+        {props.vote}
+        <span>
+          <img className="star-voting" src={voting} />
+        </span>
+      </p>
+      <p>
+        {props.price}
+        <sup>đ</sup>
+      </p>
     </div>
-  )
+  );
 }
 
 function Label(props) {
@@ -43,23 +51,26 @@ function Label(props) {
     <div className={props.clName}>
       <p className="text-label">{props.text}</p>
     </div>
-  )
+  );
 }
 
-const labels =
+const labels = (
   <div className="labels">
     <Label clName="orange-label" text="Giảm giá sốc" />
     <Label clName="orange-label" text="Mua sách tặng vở" />
     <Label clName="light-green-label" text="Bao sách miễn phí" />
     <Label clName="light-green-label" text="Hỗ trợ vận chuyển" />
   </div>
+);
 
-const productsBar1 =
+const productsBar1 = (
   <div className="product-bar">
     <div className="header">
       <h1 className="header-title">Sách bán chạy</h1>
       <div className="spacer"></div>
-      <a href="#view-all" className="header-link">Xem tất cả sản phẩm</a>
+      <a href="#view-all" className="header-link">
+        Xem tất cả sản phẩm
+      </a>
     </div>
     <div className="multiple-products">
       <Product
@@ -100,13 +111,16 @@ const productsBar1 =
       />
     </div>
   </div>
+);
 
-const productsBar2 =
+const productsBar2 = (
   <div className="product-bar">
     <div className="header">
       <h1 className="header-title">Sách giảm giá</h1>
       <div className="spacer"></div>
-      <a href="#view-all" className="header-link">Xem tất cả sản phẩm</a>
+      <a href="#view-all" className="header-link">
+        Xem tất cả sản phẩm
+      </a>
     </div>
     <div className="multiple-products">
       <Product
@@ -147,7 +161,7 @@ const productsBar2 =
       />
     </div>
   </div>
-
+);
 
 function App() {
   return (
