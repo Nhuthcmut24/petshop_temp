@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../AuthContext";
 import styles from "./Header.module.css";
 // import star from '../images/Star.svg';
@@ -7,7 +7,7 @@ import styles from "./Header.module.css";
 import logo from "../images/pet logo.jpg";
 
 function Header() {
-  const { loggedIn, userInfo } = useAuth();
+  const { loggedIn, userInfo, formData, isAdmin, handleLogin } = useAuth();
 
   // console.log('loggedIn:', loggedIn);
   // console.log('userInfo:', userInfo);
@@ -15,6 +15,16 @@ function Header() {
     // Navigate to the homepage when PETFOOD is clicked
     window.location.href = "/";
   };
+  const navigate = useNavigate();
+
+  // useEffect(() => {
+  //   handleLogin(formData, isAdmin);
+  //   navigate("/");
+  // }, [loggedIn, navigate]);
+  // useEffect(() => {
+  //   if (loggedIn);
+  //   navigate("/dangnhap");
+  // }, [loggedIn, navigate]);
   return (
     <header>
       <nav>
@@ -47,7 +57,7 @@ function Header() {
 
             <li>
               {loggedIn ? (
-                <Link to="/"> TÀI KHOẢN</Link>
+                <Link to="/"> TÀI KHOẢN </Link>
               ) : (
                 <Link to="/dangnhap">ĐĂNG NHẬP</Link>
               )}

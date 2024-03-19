@@ -20,7 +20,15 @@ exports.updateEmail = (req, res) => {
     res.json(results);
   });
 };
-
+exports.updateName = (req, res) => {
+  const username = req.params.username;
+  const name = req.body.name;
+  const query = "UPDATE NhanVien SET HoTen=? WHERE TenDangNhap=?";
+  db.query(query, [name, username], (error, results) => {
+    if (error) throw error;
+    res.json(results);
+  });
+};
 exports.updateAddress = (req, res) => {
   const username = req.params.username;
   const address = req.body.address;

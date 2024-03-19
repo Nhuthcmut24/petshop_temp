@@ -1,7 +1,7 @@
 import Header from "./Component/Header.js";
 import Footer from "./Component/Footer.js";
 import { Link, useNavigate } from "react-router-dom";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Modal from "react-modal";
 import { useAuth } from "./AuthContext";
@@ -27,6 +27,7 @@ function LoginForm() {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState("");
+  const { setLoggedIn } = useAuth();
 
   const handleChange = (e) => {
     setFormData({
@@ -42,6 +43,8 @@ function LoginForm() {
 
       if (response.status === 200) {
         handleLogin(formData, isAdmin);
+        localStorage.setItem("isLoggedIn", "true");
+        localStorage.setItem("isAdmin", isAdmin ? "true" : "false");
         navigate("/");
       }
     } catch (error) {
@@ -69,6 +72,13 @@ function LoginForm() {
     setIsModalOpen(false);
     setModalContent("");
   };
+
+  useEffect(() => {
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+    if (isLoggedIn === "true") {
+      setLoggedIn(true);
+    }
+  }, [setLoggedIn]);
 
   return (
     <div className={styles.loginForm}>
@@ -139,7 +149,17 @@ function DisplayLoginForm() {
     </div>
   );
 }
+
 function Dangnhap() {
+  const { loggedIn } = useAuth();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (loggedIn) {
+      navigate("/");
+    }
+  }, [loggedIn, navigate]);
+
   return (
     <React.Fragment>
       <Header />
@@ -149,4 +169,5 @@ function Dangnhap() {
     </React.Fragment>
   );
 }
+
 export default Dangnhap;

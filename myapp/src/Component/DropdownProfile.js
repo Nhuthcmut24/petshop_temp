@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 import { useAuth, isAdmin } from "../AuthContext";
 
 const DropdownProfile = () => {
-  const { handleLogout } = useAuth();
-  const { isAdmin } = useAuth();
+  const { handleLogout, isAdmin, userInfo } = useAuth();
 
   return (
     <div className={styles.dropdown}>

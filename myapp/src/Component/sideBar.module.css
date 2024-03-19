@@ -10,9 +10,9 @@ body {
 .sidebar {
   /* position: fixed; */
   left: 0;
-  width: 300px;
+  width: 200px;
   height: 700px;
-  background: rgba(27, 27, 27, 0.95);
+  background: #222831;
   /* border-right: 1px solid #E5E5E5; */
 }
 .sidebar ul a {
@@ -32,12 +32,40 @@ body {
   /* border-to10px5E5E5; */
   /* border-bottom: 1px solid #E5E5E5; */
   /* border-right: 1px solid #E5E5E5; */
+  list-style: none;
+  padding: 0px;
+  /* margin: 5px; */
+  display: grid;
+  /* row-gap: 8px; */
+  font-size: 20px;
 }
-.sidebar ul li:hover a {
-  /* padding-left: 50px; */
+
+.sidebar ul li a {
+  text-decoration: none;
+}
+.sidebar ul a {
+  color: white;
+  text-align: center;
+}
+.sidebar ul li {
+  padding: 0.4rem;
+  border-radius: 3px;
+  margin: 8px 0;
+}
+.sidebar ul li {
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0px;
+  /* margin: 5px; */
+  display: grid;
+  /* row-gap: 8px; */
+  font-size: 20px;
+}
+.sidebar ul li:hover,
+.active {
   background: #dfdfdfc3;
-  transform: matrix(1, 0, 0, 1, 7, 0);
-}
-.sidebar ul a i {
-  margin-right: 16px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
 }

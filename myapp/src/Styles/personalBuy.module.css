@@ -66,4 +66,6 @@ a:hover {
 .tableContainer {
   max-height: 400px; /* Đặt chiều cao tối đa của khu vực chứa bảng */
   overflow: auto; /* Tạo thanh cuộn nếu bảng quá dài */
+  /* margin-top: 50px; */
+  /* display: flex; */
 }
