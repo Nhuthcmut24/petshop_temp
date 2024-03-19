@@ -276,7 +276,7 @@ function ListProductInCart() {
           <span className={styles.customNameValue}>{cusInfo[0]?.HoTen}</span>
         </div>
         <div className={styles.customAddress}>
-          <span className={styles.orderInfoTitle}>Địa chỉ: nguennogc</span>
+          <span className={styles.orderInfoTitle}>Địa chỉ:</span>
           <span className={styles.customAddressValue}>
             {cusInfo[0]?.Diachi}
           </span>
