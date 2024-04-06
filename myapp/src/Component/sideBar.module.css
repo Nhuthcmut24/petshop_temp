@@ -12,7 +12,7 @@ body {
   left: 0;
   width: 200px;
   height: 700px;
-  background: #222831;
+  background: #ffffff;
   /* border-right: 1px solid #E5E5E5; */
 }
 .sidebar ul a {
@@ -42,6 +42,7 @@ body {
 
 .sidebar ul li a {
   text-decoration: none;
+  color: black;
 }
 .sidebar ul a {
   color: white;

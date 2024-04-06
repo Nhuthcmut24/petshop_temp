@@ -64,6 +64,8 @@ CREATE TABLE DonHang (
     NgayTao DATETIME,
     XacNhan CHAR(20),
     DiaChi TEXT(65535) NOT NULL,
+    PhuongThucThanhToan VARCHAR(50) ,
+    DonViVanChuyen VARCHAR(50),
     PRIMARY KEY(ID)
 );
 ALTER TABLE DonHang
@@ -171,7 +173,9 @@ END //
 
 CREATE PROCEDURE TaoDonHangTuGioHang(
     p_SoDienThoai CHAR(10),
-    p_TongTien INT
+    p_TongTien INT,
+    p_PhuongThucThanhToan VARCHAR(50) ,
+    p_DonViVanChuyen VARCHAR(50) 
 )
 BEGIN
     DECLARE p_XacNhan CHAR(20);
@@ -181,7 +185,7 @@ BEGIN
     SET p_XacNhan = 'Đang xử lý';
     SET p_DiaChi = (SELECT DiaChi FROM KhachHang WHERE SoDienThoai = p_SoDienThoai);
     
-    INSERT INTO DonHang (SoDienThoai, TongTien, NgayTao, XacNhan, DiaChi) VALUE (p_SoDienThoai, p_TongTien, NOW(), p_XacNhan, p_DiaChi);
+    INSERT INTO DonHang (SoDienThoai, TongTien, NgayTao, XacNhan, DiaChi,DonViVanChuyen,PhuongThucThanhToan) VALUE (p_SoDienThoai, p_TongTien, NOW(), p_XacNhan, p_DiaChi,p_DonViVanChuyen,p_PhuongThucThanhToan);
     
     SET IDDonHang = LAST_INSERT_ID();
     
@@ -362,3 +366,4 @@ insert into DonHangCoFood(IDDonHang, IDFood, SoLuong, TongTien) value (5, 6, 1, 
 -- select * from khachhang
 SELECT * FROM Food;
 SELECT * FROM Food WHERE LOWER(Ten) LIKE LOWER('%chó%') OR LOWER(NhaSanXuat) LIKE LOWER('%chó%');
+select * from donhang;

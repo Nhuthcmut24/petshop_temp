@@ -7,8 +7,9 @@
   padding: 0px;
   position: absolute;
   /* left: 0px; */
-  background: #222831;
+  background: while;
   /* border-radius: 10px; */
+  border-style: groove;
   font-size: 25px;
   width: 200px;
   /* margin-left: 60px; */
@@ -33,8 +34,8 @@
   text-decoration: none;
 }
 .sideboardele ul a {
-  color: white;
   text-align: center;
+  color: black;
 }
 .sideboardele ul li {
   padding: 0.4rem;
@@ -55,7 +56,7 @@
 .searchBar {
   height: 50px;
   width: 100%;
-  background: #76abae;
+  background: rgb(67, 6, 6);
 }
 .searchBar .searchInput {
   position: absolute;

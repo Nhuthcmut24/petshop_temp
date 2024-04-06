@@ -59,7 +59,8 @@ exports.deleteFromCart = (req, res) => {
 };
 
 exports.intoOrder = (req, res) => {
-  const { username, totalPrice } = req.body;
+  const { username, totalPrice, PhuongThucThanhToan, DonViVanChuyen } =
+    req.body;
   const query = "SELECT * FROM khachhang WHERE TenDangNhap=?";
   db.query(query, [username], (error, results) => {
     if (error) throw error;
@@ -68,11 +69,15 @@ exports.intoOrder = (req, res) => {
       return;
     }
     const phoneNumber = results[0].SoDienThoai;
-    const query2 = "CALL TaoDonHangTuGioHang(?, ?)";
-    db.query(query2, [phoneNumber, totalPrice], (error, results) => {
-      if (error) throw error;
-      res.json(results);
-    });
+    const query2 = "CALL TaoDonHangTuGioHang(?, ?,?,?)";
+    db.query(
+      query2,
+      [phoneNumber, totalPrice, PhuongThucThanhToan, DonViVanChuyen],
+      (error, results) => {
+        if (error) throw error;
+        res.json(results);
+      }
+    );
   });
 };
 

@@ -1,38 +1,38 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 body {
-    font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.sidebar{
-    /* position: fixed; */
-    left: 0;
-    width: 298px;
-    height: 550px;
-    background: #ffffff;
-    border-right: 1px solid #E5E5E5;
+.sidebar {
+  /* position: fixed; */
+  left: 0;
+  width: 298px;
+  height: 550px;
+  background: #ffffff;
+  border-right: 1px solid #e5e5e5;
 }
-.sidebar ul a{
-    text-align: center;
-    display: block;
-    height: 100%;
-    width: 100%;
-    line-height: 65px;
-    font-size: 24px;
-    color: #ffffff;
-    /* padding-left: 40px; */
-    box-sizing: border-box;
-    border-top: 1px solid #E5E5E5;
-    border-bottom: 1px solid #E5E5E5;
-    border-right: 1px solid #E5E5E5;
+.sidebar ul a {
+  text-align: center;
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  font-size: 24px;
+  color: #ffffff;
+  /* padding-left: 40px; */
+  box-sizing: border-box;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
 }
-ul li:hover a{
-    /* padding-left: 50px; */
-    color: #FF5050;
+ul li:hover a {
+  /* padding-left: 50px; */
+  color: #ff5050;
 }
-.sidebar ul a i{
-    margin-right: 16px;
+.sidebar ul a i {
+  margin-right: 16px;
 }

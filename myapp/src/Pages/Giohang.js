@@ -3,14 +3,15 @@ import Header from "../Component/Header.js";
 import Footer from "../Component/Footer.js";
 import { Product } from "./Trangchu.js";
 import { useAuth } from "../AuthContext.js";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import styles from "../Styles/Giohang.module.css";
 import increase from "..//images/increase.svg";
 import decrease from "../images/decrease.svg";
 import garbageDump from "../images/garbagedump.png";
-
+import "./giohang.css";
 function ProductInCart(props) {
+  const navigate = useNavigate();
   const [quantity, setQuantity] = useState(props.quantity);
   let curPrice = props.price * (1 - props.discount / 100);
   const [sumPrice, setSumPrice] = useState(curPrice * props.quantity);
@@ -151,10 +152,10 @@ function ListProductInCart() {
   const [products, setProducts] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
   const [cusInfo, setCusInfo] = useState("");
-
+  const [DonViVanChuyen, setDonViVanChuyen] = useState("");
+  const [PhuongThucThanhToan, setPhuongThucThanhToan] = useState("");
   const updateProductInfo = ({ bookId, quantity, sumPrice }) => {
     console.log("Updating product info:", bookId, quantity, sumPrice);
-
     setProducts((prevProducts) =>
       prevProducts.map((product) =>
         product.IDFood === bookId
@@ -194,6 +195,8 @@ function ListProductInCart() {
         body: JSON.stringify({
           username: userInfo.username,
           totalPrice: totalPrice,
+          PhuongThucThanhToan: PhuongThucThanhToan,
+          DonViVanChuyen: DonViVanChuyen,
         }),
       });
 
@@ -234,6 +237,19 @@ function ListProductInCart() {
     setTotalPrice(newTotalPrice);
   }, [products]);
   console.log(cusInfo);
+
+  const handleSelectDonViVanChuyen = (event) => {
+    const DonViVanChuyen = event.target.value;
+    setDonViVanChuyen(DonViVanChuyen);
+  };
+  const handleSelectPhuongThucThanhToan = (event) => {
+    const PhuongThucThanhToan = event.target.value;
+    setPhuongThucThanhToan(PhuongThucThanhToan);
+  };
+  const navigate = useNavigate();
+  const handleChangeInfo = (event) => {
+    navigate("/thongtinkh");
+  };
   return (
     <div className={styles.bodyGioHang}>
       <div>
@@ -270,6 +286,36 @@ function ListProductInCart() {
           </div>
         </div>
       </div>
+      <div className="scheduler_modal_list_1">
+        <div className="scheduler_modal_body_title_1">
+          Chọn phương thức thanh toán
+        </div>
+        <select
+          className="form-select"
+          id="datatype"
+          aria-label="dataType"
+          onChange={handleSelectPhuongThucThanhToan}
+        >
+          <option value="muc1">Thanh toán tiền mặt</option>
+          <option value="muc2">Momo</option>
+          <option value="muc3">ZaloPay</option>
+          <option value="muc3">Banking</option>
+        </select>
+        <div className="scheduler_modal_body_title_1">
+          Chọn đơn vị vận chuyển
+        </div>
+        <select
+          className="form-select"
+          id="datatype"
+          aria-label="dataType"
+          onChange={handleSelectDonViVanChuyen}
+        >
+          <option value="muc1">Giao hàng nhanh</option>
+          <option value="muc2">Giao hàng tiết kiệm</option>
+          <option value="muc3">Viettel Post</option>
+          <option value="muc3">Ninja Van</option>
+        </select>
+      </div>
       <div className={styles.orderInfo}>
         <div className={styles.customName}>
           <span className={styles.orderInfoTitle}>Họ và tên:</span>
@@ -296,7 +342,11 @@ function ListProductInCart() {
         </div>
         <div className={styles.orderButton}>
           <form>
-            <button className={styles.adjustInfomation} type="button">
+            <button
+              className={styles.adjustInfomation}
+              type="button"
+              onClick={handleChangeInfo}
+            >
               Sửa thông tin
             </button>
           </form>
