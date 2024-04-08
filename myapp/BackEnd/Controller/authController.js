@@ -8,7 +8,7 @@ exports.signup = (req, res) => {
   }
 
   const sql =
-    "INSERT INTO khachhang (TenDangNhap, MatKhau, SoDienThoai) VALUES (?, ?, ?)";
+    "INSERT INTO khachhang (TenDangNhap, MatKhau, SoDienThoai,NgayTao) VALUES (?, ?, ?,NOW())";
   db.query(sql, [username, password, phoneNumber], (error, results) => {
     if (error) {
       console.error(error);

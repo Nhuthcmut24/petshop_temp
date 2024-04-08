@@ -15,7 +15,8 @@
   /* margin-left: 60px; */
   text-align: center;
   /* align-items: center; */
-  height: 820px;
+  height: 730px;
+  background-color: rgb(224, 231, 233);
 }
 
 .sideboard .sideboardele p {
@@ -49,7 +50,7 @@
 
 .sideboardele ul li:hover,
 .active {
-  background: #dfdfdfc3;
+  background: #520404c3;
   transform: matrix(1, 0, 0, 1, 0, 0);
 }
 

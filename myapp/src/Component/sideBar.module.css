@@ -11,9 +11,10 @@ body {
   /* position: fixed; */
   left: 0;
   width: 200px;
-  height: 700px;
-  background: #ffffff;
-  /* border-right: 1px solid #E5E5E5; */
+  height: 736px;
+  background-color: rgb(224, 231, 233); /* border-right: 1px solid #E5E5E5; */
+  border-width: 5px;
+  border-style: groove;
 }
 .sidebar ul a {
   transition: all 0.5s ease;
@@ -67,6 +68,6 @@ body {
 }
 .sidebar ul li:hover,
 .active {
-  background: #dfdfdfc3;
+  background: #520404c3;
   transform: matrix(1, 0, 0, 1, 0, 0);
 }

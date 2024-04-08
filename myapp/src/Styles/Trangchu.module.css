@@ -175,7 +175,8 @@ a[id="link-to-product-tag"] {
   column-gap: 10px;
   justify-content: center;
   position: relative;
-  top: 780px;
+  top: 650px;
+  margin-bottom: 670px;
 }
 .pagination li {
   width: 20px;

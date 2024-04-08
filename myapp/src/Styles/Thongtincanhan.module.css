@@ -2,7 +2,7 @@
   margin-left: 320px;
   /* background-color:blue; */
   margin-top: -680px;
-  height: 750px;
+  height: 680px;
 }
 .infoContainer {
   width: 500px;
@@ -95,7 +95,7 @@
 .infoButton5 {
   position: absolute;
   left: 555px;
-  top: 435px;
+  top: 470px;
   width: 85px;
   height: 30px;
   margin-top: 5px;
