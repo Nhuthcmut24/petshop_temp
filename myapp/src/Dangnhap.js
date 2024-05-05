@@ -62,9 +62,9 @@ function LoginForm() {
     const isAdmin = document.getElementById("isAdmin").checked;
 
     if (isAdmin) {
-      handleLoginRequest("http://localhost:3001/api/AdminLogin", true);
+      handleLoginRequest("http://localhost:4001/api/AdminLogin", true);
     } else {
-      handleLoginRequest("http://localhost:3001/api/login", false);
+      handleLoginRequest("http://localhost:4001/api/login", false);
     }
   };
 

@@ -36,7 +36,7 @@ function ProductInCart(props) {
     if (!isConfirmed) return;
 
     try {
-      const response = await fetch("http://localhost:3001/api/deleteFromCart", {
+      const response = await fetch("http://localhost:4001/api/deleteFromCart", {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -60,7 +60,7 @@ function ProductInCart(props) {
     if (updateTimeout) clearTimeout(updateTimeout);
     const timeout = setTimeout(() => {
       console.log("Updating to DB:", props.bookId, quantity, sumPrice);
-      fetch("http://localhost:3001/api/updateQuantityInCart", {
+      fetch("http://localhost:4001/api/updateQuantityInCart", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -174,7 +174,7 @@ function ListProductInCart() {
 
   const updateProduct = () => {
     const username = userInfo.username;
-    fetch(`http://localhost:3001/api/cart/${username}`)
+    fetch(`http://localhost:4001/api/cart/${username}`)
       .then((response) => response.json())
       .then((data) => setProducts(data))
       .catch((error) => console.error("Error fetching cart:", error));
@@ -187,7 +187,7 @@ function ListProductInCart() {
     if (!isConfirmed) return;
 
     try {
-      const response = await fetch("http://localhost:3001/api/intoOrder", {
+      const response = await fetch("http://localhost:4001/api/intoOrder", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -214,14 +214,14 @@ function ListProductInCart() {
 
   useEffect(() => {
     const username = userInfo.username;
-    fetch(`http://localhost:3001/api/cart/${username}`)
+    fetch(`http://localhost:4001/api/cart/${username}`)
       .then((response) => response.json())
       .then((data) => setProducts(data))
       .catch((error) => console.error("Error fetching cart:", error));
   }, [userInfo.username]);
   useEffect(() => {
     const username = userInfo.username;
-    fetch(`http://localhost:3001/api/customerInfo/${username}`)
+    fetch(`http://localhost:4001/api/customerInfo/${username}`)
       .then((response) => response.json())
       .then((data) => setCusInfo(data))
       .catch((error) =>

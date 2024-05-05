@@ -13,7 +13,7 @@ function Xacnhandon() {
   const [searchInput, setSearchInput] = useState("");
   const [updateTimeout, setUpdateTimeout] = useState(null);
   const fetchAllOrder = () => {
-    fetch("http://localhost:3001/api/GetOrder")
+    fetch("http://localhost:4001/api/GetOrder")
       .then((res) => res.json())
       .then((json) => setData(json));
   };
@@ -36,7 +36,7 @@ function Xacnhandon() {
   useEffect(() => {
     if (searchTerm) {
       setIsSearch(true);
-      fetch(`http://localhost:3001/api/SearchOrder?searchTerm=${searchTerm}`)
+      fetch(`http://localhost:4001/api/SearchOrder?searchTerm=${searchTerm}`)
         .then((response) => response.json())
         .then((data) => setData(data))
         .catch((error) => console.log(error));
@@ -48,7 +48,7 @@ function Xacnhandon() {
 
   const handleConfirmOrder = (orderId) => {
     try {
-      fetch(`http://localhost:3001/api/updateOrderState/${orderId}`, {
+      fetch(`http://localhost:4001/api/updateOrderState/${orderId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -71,7 +71,7 @@ function Xacnhandon() {
   };
   const handleConfirmOrder2 = (orderId) => {
     try {
-      fetch(`http://localhost:3001/api/updateOrderState/${orderId}`, {
+      fetch(`http://localhost:4001/api/updateOrderState/${orderId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

@@ -12,7 +12,7 @@ const customerRoutes = require("./Routes/customerRoutes");
 const staffRoutes = require("./Routes/staffRoutes");
 
 const app = express();
-const port = 3001;
+const port = 4001;
 
 app.use(cors());
 app.use(express.json());

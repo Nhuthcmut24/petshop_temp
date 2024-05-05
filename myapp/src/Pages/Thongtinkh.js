@@ -15,7 +15,7 @@ const Thongtinkh = () =>{
   const [customerInfo, setCustomerInfo] = useState([]);
 
   const fetchCustomerInfo = (username, setCustomerInfo ) => {
-    fetch(`http://localhost:3001/api/customerInfo/${username}`)
+    fetch(`http://localhost:4001/api/customerInfo/${username}`)
       .then(res => res.json())
       .then(
         (result) => {
@@ -35,7 +35,7 @@ const Thongtinkh = () =>{
     const username = userInfo.username;
     const email = prompt("Nhập email mới");
     if (email === null) return;
-    fetch(`http://localhost:3001/api/updateEmail/${username}`, {
+    fetch(`http://localhost:4001/api/updateEmail/${username}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
@@ -58,7 +58,7 @@ const Thongtinkh = () =>{
     const username = userInfo.username;
     const address = prompt("Nhập địa chỉ mới");
     if (address === null) return;
-    fetch(`http://localhost:3001/api/updateAddress/${username}`, {
+    fetch(`http://localhost:4001/api/updateAddress/${username}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
@@ -81,7 +81,7 @@ const Thongtinkh = () =>{
     const username = userInfo.username;
     const password = prompt("Nhập mật khẩu mới");
     if (password === null) return;
-    fetch(`http://localhost:3001/api/updatePassword/${username}`, {
+    fetch(`http://localhost:4001/api/updatePassword/${username}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'

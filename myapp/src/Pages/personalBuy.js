@@ -38,7 +38,7 @@ function PersonalBuy() {
     setFilter(e.target.value);
   };
   useEffect(() => {
-    fetch(`http://localhost:3001/api/orderList/${userInfo.username}`)
+    fetch(`http://localhost:4001/api/orderList/${userInfo.username}`)
       .then((res) => res.json())
       .then(
         (result) => {

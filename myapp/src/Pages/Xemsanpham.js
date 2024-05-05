@@ -10,14 +10,14 @@ import { useAuth } from "../AuthContext.js";
 import Modal from "react-modal";
 
 function fetchProductDetails(bookId, setProductDetails) {
-  fetch(`http://localhost:3001/api/getProductDetails/${bookId}`)
+  fetch(`http://localhost:4001/api/getProductDetails/${bookId}`)
     .then((response) => response.json())
     .then((data) => setProductDetails(data))
     .catch((error) => console.error("Error fetching product details:", error));
 }
 
 function fetchProductReviews(bookId, setReviewDetails) {
-  fetch(`http://localhost:3001/api/getProductReviews/${bookId}`)
+  fetch(`http://localhost:4001/api/getProductReviews/${bookId}`)
     .then((response) => response.json())
     .then((data) => setReviewDetails(data))
     .catch((error) => console.error("Error fetching product details:", error));
@@ -52,7 +52,7 @@ const ViewProduct = () => {
       username: userInfo.username,
     };
 
-    fetch("http://localhost:3001/api/addToCart", {
+    fetch("http://localhost:4001/api/addToCart", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

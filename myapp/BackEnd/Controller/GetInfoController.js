@@ -5,7 +5,7 @@ exports.GetAdmin = async (req, res, next) => {
     const query1 = `select * from nhanvien WHERE ID = ? `;
     const { employee_ID } = req.params;
     const value1 = [employee_ID];
-    const results = await query(query1, value1);
+    const results = await query1(query1, value1);
     res.status(200).json(results);
   } catch (error) {
     next(error);
@@ -39,7 +39,7 @@ exports.GetOrderConfirm = async (req, res, next) => {
                 FROM donhang
                 WHERE XacNhan = 'N'
                 `;
-    const results = await query(query1);
+    const results = await query1(query1);
     res.status(200).json(results);
   } catch (error) {
     next(error);
@@ -49,7 +49,7 @@ exports.GetOrderConfirm = async (req, res, next) => {
 exports.GetListBook = async (req, res, next) => {
   try {
     const query1 = `SELECT * FROM Food`;
-    const results = await query(query1);
+    const results = await query1(query1);
     res.status(200).json(results);
   } catch (error) {
     next(error);
@@ -61,7 +61,7 @@ exports.GetBook = async (req, res, next) => {
     const query1 = `SELECT * FROM Food WHERE ID = ?`;
     const { book_ID } = req.params;
     const value1 = [book_ID];
-    const results = await query(query1, value1);
+    const results = await query1(query1, value1);
     res.status(200).json(results);
   } catch (error) {
     next(error);

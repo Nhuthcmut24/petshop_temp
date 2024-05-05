@@ -76,7 +76,7 @@ function TrangChu() {
   useEffect(() => {
     if (searchTerm) {
       setIsSearch(true);
-      fetch(`http://localhost:3001/api/search?q=${searchTerm}`)
+      fetch(`http://localhost:4001/api/search?q=${searchTerm}`)
         .then((response) => response.json())
         .then((data) => setProducts(data))
         .catch((error) =>
@@ -84,7 +84,7 @@ function TrangChu() {
         );
     } else {
       setIsSearch(false);
-      fetch("http://localhost:3001/api/getBooksForHomePage")
+      fetch("http://localhost:4001/api/getBooksForHomePage")
         .then((response) => response.json())
         .then((data) => setProducts(data))
         .catch((error) => console.error("Error fetching books:", error));

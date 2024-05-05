@@ -41,7 +41,7 @@ function SignupForm() {
 
     try {
       const response = await axios.post(
-        "http://localhost:3001/api/signup",
+        "http://localhost:4001/api/signup",
         formData
       );
       console.log(response.data);

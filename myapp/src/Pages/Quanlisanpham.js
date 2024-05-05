@@ -27,7 +27,7 @@ import {
 } from "react-bootstrap";
 function Quanlisanpham() {
   const [products, setProducts] = useState([]);
-  fetch("http://localhost:3001/api/getBooksForHomePage")
+  fetch("http://localhost:4001/api/getBooksForHomePage")
     .then((response) => response.json())
     .then((data) => setProducts(data))
     .catch((error) => console.error("Error fetching books:", error));
@@ -47,7 +47,8 @@ function Quanlisanpham() {
     soldQuantity: "",
     discount: "",
   });
-  const handleInputChange = (e) => {
+
+  const handleInputChange = e => {
     const { name, value } = e.target;
     setBookInfo({ ...bookInfo, [name]: value });
   };
@@ -77,7 +78,7 @@ function Quanlisanpham() {
     try {
       console.log(bookInfo);
 
-      const response = await fetch("http://localhost:3001/api/addBook", {
+      const response = await fetch("http://localhost:4001/api/addBook", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

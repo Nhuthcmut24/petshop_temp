@@ -60,7 +60,7 @@ const BookForm = () => {
       formData.append("TacGia", bookInfo.author);
       formData.append("DiemTrungBinh", bookInfo.averageRating);
 
-      const response = await fetch("http://localhost:3001/api/AddBook", {
+      const response = await fetch("http://localhost:4001/api/AddBook", {
         method: "POST",
         body: formData,
       });

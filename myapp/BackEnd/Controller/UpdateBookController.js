@@ -28,7 +28,7 @@ exports.UpdateBook = async (req, res, next) => {
       TacGia,
       DiemTrungBinh,
     ];
-    const result = await query(query1, value);
+    const result = await query1(query1, value);
     res.status(200).json({ message: "success" });
   } catch (error) {
     next(error);

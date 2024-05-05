@@ -11,6 +11,7 @@ exports.getBooksForHomePage = (req, res) => {
     }
   });
 };
+
 exports.getBooksDogForHomePage = (req, res) => {
   const query =
     "SELECT  food.ID ,food.Ten , food.Anh ,food.MoTa ,food.Gia ,food.MucGiamGia ,food.SoLuongDaBan ,food.NhaCungCap ,food.NhaSanXuat ,food.DiemTrungBinh  FROM food,foodthuocdanhmuc,danhmuc WHERE food.ID=foodthuocdanhmuc.IDFood and foodthuocdanhmuc.IDdanhmuc=danhmuc.ID and danhmuc.ten= 'Thức ăn cho chó' ;";

@@ -15,7 +15,7 @@ const Thongtintk = () => {
 
   const fetchStaffInfo = (username, setStaffInfo) => {
     console.log(username);
-    fetch(`http://localhost:3001/api/staffInfo/${username}`)
+    fetch(`http://localhost:4001/api/staffInfo/${username}`)
       .then((res) => res.json())
       .then(
         (result) => {
@@ -35,7 +35,7 @@ const Thongtintk = () => {
     const username = userInfo.username;
     const email = prompt("Nhập email mới");
     if (email === null) return;
-    fetch(`http://localhost:3001/api/updateStaffEmail/${username}`, {
+    fetch(`http://localhost:4001/api/updateStaffEmail/${username}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -58,7 +58,7 @@ const Thongtintk = () => {
     const username = userInfo.username;
     const address = prompt("Nhập địa chỉ mới");
     if (address === null) return;
-    fetch(`http://localhost:3001/api/updateStaffAddress/${username}`, {
+    fetch(`http://localhost:4001/api/updateStaffAddress/${username}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -80,7 +80,7 @@ const Thongtintk = () => {
     const username = userInfo.username;
     const name = prompt("Nhập họ và tên mới");
     if (name === null) return;
-    fetch(`http://localhost:3001/api/updateStaffName/${username}`, {
+    fetch(`http://localhost:4001/api/updateStaffName/${username}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -102,7 +102,7 @@ const Thongtintk = () => {
     const username = userInfo.username;
     const password = prompt("Nhập mật khẩu mới");
     if (password === null) return;
-    fetch(`http://localhost:3001/api/updateStaffPassword/${username}`, {
+    fetch(`http://localhost:4001/api/updateStaffPassword/${username}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

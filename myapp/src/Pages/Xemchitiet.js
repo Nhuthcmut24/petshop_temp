@@ -22,7 +22,7 @@ const ViewDetails = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`http://localhost:3001/api/orderProduct/${orderId}`)
+    fetch(`http://localhost:4001/api/orderProduct/${orderId}`)
       .then((res) => res.json())
       .then(
         (result) => {
@@ -87,7 +87,7 @@ const ViewDetails = () => {
     console.log(username);
     console.log(bookID);
     const body = { username, rating, comment: comment };
-    fetch(`http://localhost:3001/api/rating/${bookID}`, {
+    fetch(`http://localhost:4001/api/rating/${bookID}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -114,7 +114,7 @@ const ViewDetails = () => {
 
   const handelCancel = () => {
     try {
-      fetch(`http://localhost:3001/api/updateOrderState/${orderId}`, {
+      fetch(`http://localhost:4001/api/updateOrderState/${orderId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -141,7 +141,7 @@ const ViewDetails = () => {
     const payment = window.confirm("Bạn có muốn thanh toán đơn hàng này?");
     if (!payment) return;
     try {
-      fetch(`http://localhost:3001/api/updateOrderState/${orderId}`, {
+      fetch(`http://localhost:4001/api/updateOrderState/${orderId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
